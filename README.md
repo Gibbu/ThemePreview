@@ -1,10 +1,18 @@
 # ThemePreview for Discord themes
 
-How to use:  
-Go to [https://gibbu.github.io/ThemePreview/?file=](https://gibbu.github.io/ThemePreview/?file=)
-then add your css file that is being hosted after `file=`.
+Basic usage:  
+Go to [https://gibbu.github.io/ThemePreview/?file=](https://gibbu.github.io/ThemePreview/?file=) then add your direct web hosted css url.
 
-Example:  
+URL parameters:
+
+| Parameter | Description | Options |
+| :---- | :---- | :---- |
+| file | Imports web hosted css into previewer |  |
+| lightTheme | Auto sets Discord light theme | true |
+| popout | Displays user popout | true |
+If you do not wish to use light theme or display the popout, simply leave the parameter out of the url.
+
+End result:
 ```
-https://gibbu.github.io/ThemePreview/?file=https://tropix126.github.io/BetterDiscordStuff/midnight/Midnight.theme.css
+https://gibbu.github.io/ThemePreview/?file=https://gibbu.github.io/BetterDiscord-Themes/TrueLight/TrueLight.theme.css&theme=light&popout=true
 ```
