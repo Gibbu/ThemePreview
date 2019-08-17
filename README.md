@@ -2,7 +2,7 @@
 
 How to use:  
 Go to [https://gibbu.github.io/ThemePreview/?file=](https://gibbu.github.io/ThemePreview/?file=)
-Then add your css file that is being hosted.
+then add your css file that is being hosted after `file=`.
 
 Example:  
 ```
