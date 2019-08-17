@@ -2,7 +2,7 @@
 
 How to use:  
 Go to [https://gibbu.github.io/ThemePreview/?file=](https://gibbu.github.io/ThemePreview/?file=)
-Then add your `[THEMENAME].theme.css` hosted by github.
+Then add your css file that is being hosted.
 
 Example:  
 ```
