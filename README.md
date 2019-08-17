@@ -15,5 +15,5 @@ If you do not wish to use light theme or display the popout, simply leave the pa
 
 End result:
 ```
-https://gibbu.github.io/ThemePreview/?file=https://gibbu.github.io/BetterDiscord-Themes/TrueLight/TrueLight.theme.css&theme=light&popout=true
+https://gibbu.github.io/ThemePreview/?file=https://gibbu.github.io/BetterDiscord-Themes/TrueLight/TrueLight.theme.css&lightTheme=light&popout=true
 ```
