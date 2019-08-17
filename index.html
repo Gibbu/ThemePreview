@@ -1,0 +1,1076 @@
+<html lang="en-US" style="font-size: 100%" data-react-helmet="lang,style">
+    <head>
+        <script>
+        window.onload = function() {
+            try {
+                var url_string = window.location.href;
+                var url = new URL(url_string);
+                var file = url.searchParams.get("file");
+                document.querySelector('#importCSS').setAttribute('href', file);
+            } catch (err) {
+                console.log("Issues with Parsing URL Parameter's - " + err);
+            }
+        }
+        </script>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- section:seometa -->
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Discord">
+        <meta property="og:title" content="Discord - Free voice and text chat for gamers">
+        <meta property="og:description" content="Step up your game with a modern voice &amp; text chat app. Crystal clear voice, multiple server and channel support, mobile apps, and more. Get your free server now!">
+        <meta property="og:image" content="https://discordapp.com/assets/ee7c382d9257652a88c8f7b7f22a994d.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@discordapp">
+        <meta name="twitter:creator" content="@discordapp">
+        <link rel="stylesheet" href="discordCSS.css">
+        <link id="importCSS" rel="stylesheet" href="">
+        <!-- endsection -->
+        <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/lcbhdgefieegnkbopmgklhlpjjdgmbog">
+        <link rel="stylesheet" href="/assets/0.2df79ad25cdc72f4b970.css" integrity="sha256-t7nKB4uP/guPOe+4B+QSwytYFolXeVLpOjvoyMu9CL8= sha512-XGluucm7Y0ExFEZDJWQBDx6SjR/geX5zha7rcevfsjOggOlX8T77B8BtG5j2635J98iSW8R7QlYZQ3d9nu3o1A==">
+        <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEJ0lEQVRYR+2WXUybVRjHf20ptLBSx8cqIKy1W2wlCnGiXjgzhS1ezEFNxAsV3BaXKDPGDTS6TTFzmwkwXdToJokiu5kfGUTj4saIu9AliAZM+FiywmAW+ZJRWim0tK95G1qotPTtILvy3LzJe/7P8/+f5+scGfPrqa8ERc5g7wEEXgFSAv9X+TuBjBODOaYjX5fKvKJvWYBgf23vQQTh8CoThncnkx2qqzS9GyqgpmccSL0lAuDvuipz2n8FCLeI3E9TV2X2R38hBTU9/wuIGIHM9AQ25Wq5TaPENjpDZ+8UapWChHi5P5wzbh9uj4/N960lM13FwF8ufuuyMzQ2GzGrklKgSYzDUqRDlxrP8LjbT7g+Q+UnD7cc/8zRb3OhSpCTtU7F1cFpmi6O4JieWwKXJODZ7Zncs1HjN1YoguUiqVY9Hh9KpZyO3ilOfz8UuwCtJo4DezYgj413CZFPgCOnrmJ3hEYhagQefzidoodWZyxcuDzOjz+LY2ZhRRXw5gtGUrRKSeGOBpqwezj6mVW6ALHq95Ublviddfv4c2SGO3SqYAcEQM5pL6MTs+RkqIlTyHB3dBCfnx/0cbyhP6Qrlo3A5k0pFD+6LkSAa8bL8S+vcWPKw9pkJfvK9MFuGLvhpum1egyXz5LqHEI70B20VW3ZglKv5497d3DOaw7+X1aAWP35puQQAZ1XHDR+Zwv+e+6JLPLu0uCbnKSr5BmSLv0QLRO0bdtL+9aK6KNYDL+YhsVLPGXt5/14fQIKuYzKnQY0nb8wbLH4RUhd45lmzpV/SPWxosh3weG9G8MOm4EhF91WJ3cb15CdOMugwRATeUCkzfgAj1jbIguoqTQFbylxPrtcXhLVodNvuKSE6eZmqQcPh3vHCNVhb8OqnQZ0qQspEGd6T5+T9Rlq7sxOxNXcxIjFshJyv60cDGEFaJLiEAvRmJ0YJBEn2u/dds62jLD99Mvo2s+vWADwasT3gLhhNq7h/lwt+ky1PwX13173XzCl71tIG+oNKyCjpQV1YaF/z2uzMVpWhqu1NSxWgIabepC8VLXQz4s9p9fXo9m9O4TM093N9dzcSNHqiFlAmq2H0g+ejHr6AEBwOBirqMDZ2BjWJmYBopfVioAAl25KQPEnZWT1/Ro1CtFqADixWMA0oJZS2o+deQNTe5MUaDTMQhdU1vQ0CFAWzULcz7K2UfxpuRTochi7HPTBCLz+nlU7p3B/AxRJ8Vxw/iMKLnwsBRqpBS0boGnJg2t/7RWTTPDdLsXzroMF9QmzTqMU7GJMX24hW7suht4FsToR8f2g94FYDHlS7UXy1qePcuytB1cuIEBqhWrg7Sgi7M5k3YsNh356XgbbljxIpJ4gEm4+GiUC5MtAfIvlzfd5B3BNDl8YYHLPyXalZirpZF2VeZfo61+PD6XFPaCuOgAAAABJRU5ErkJggg=="
+            type="image/png">
+        <!-- section:title -->
+        <title>#current-channel</title>
+        <!-- endsection -->
+    </head>
+    <body>
+        <div id="app-mount" class="appMount-3lHmkl">
+            <svg viewBox="0 0 1 1" style="position: absolute; pointer-events: none; top: -1px; left: -1px; width: 1px; height: 1px;">
+                <mask id="svg-mask-squircle" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <path fill="white" d="M0 0.464C0 0.301585 0 0.220377 0.0316081 0.158343C0.0594114 0.103776 0.103776 0.0594114 0.158343 0.0316081C0.220377 0 0.301585 0 0.464 0H0.536C0.698415 0 0.779623 0 0.841657 0.0316081C0.896224 0.0594114 0.940589 0.103776 0.968392 0.158343C1 0.220377 1 0.301585 1 0.464V0.536C1 0.698415 1 0.779623 0.968392 0.841657C0.940589 0.896224 0.896224 0.940589 0.841657 0.968392C0.779623 1 0.698415 1 0.536 1H0.464C0.301585 1 0.220377 1 0.158343 0.968392C0.103776 0.940589 0.0594114 0.896224 0.0316081 0.841657C0 0.779623 0 0.698415 0 0.536V0.464Z"></path>
+                </mask>
+                <mask id="svg-mask-header-bar-badge" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <rect fill="white" x="0" y="0" width="1" height="1"></rect>
+                    <circle fill="black" cx="0.75" cy="0.75" r="0.25"></circle>
+                </mask>
+                <mask id="svg-mask-voice-user-summary-item" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <rect fill="white" width="1" height="1"></rect>
+                    <circle fill="black" cx="1.2083333333333333" cy="0.5" r="0.5416666666666666"></circle>
+                </mask>
+                <mask id="svg-mask-vertical-fade" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <linearGradient id="svg-mask-vertical-fade-gradient" gradientTransform="rotate(90)" x1="0" x2="1" y1="0" y2="0">
+                        <stop offset="0%" stop-color="white"></stop>
+                        <stop offset="100%" stop-color="black"></stop>
+                    </linearGradient>
+                    <rect fill="url(#svg-mask-vertical-fade-gradient)" x="0" y="0" width="1" height="1"></rect>
+                </mask>
+                <mask id="svg-mask-avatar-default" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                </mask>
+                <mask id="svg-mask-avatar-status-round-16" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                    <circle fill="black" cx="0.8125" cy="0.8125" r="0.3125"></circle>
+                </mask>
+                <mask id="svg-mask-avatar-status-mobile-16" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                    <rect fill="black" x="0.5" y="0.3125" width="0.625" height="0.8125" rx="0.1625" ry="0.1625"></rect>
+                </mask>
+                <mask id="svg-mask-avatar-status-typing-16" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                    <rect fill="black" x="0.21875" y="0.5" width="1.1875" height="0.625" rx="0.3125" ry="0.3125"></rect>
+                </mask>
+                <mask id="svg-mask-avatar-status-round-24" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                    <circle fill="black" cx="0.8333333333333334" cy="0.8333333333333334" r="0.2916666666666667"></circle>
+                </mask>
+                <mask id="svg-mask-avatar-status-mobile-24" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                    <rect fill="black" x="0.5416666666666666" y="0.375" width="0.5833333333333334" height="0.75" rx="0.15" ry="0.15"></rect>
+                </mask>
+                <mask id="svg-mask-avatar-status-typing-24" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                    <rect fill="black" x="0.2916666666666667" y="0.5416666666666666" width="1.0833333333333333" height="0.5833333333333334" rx="0.2916666666666667" ry="0.2916666666666667"></rect>
+                </mask>
+                <mask id="svg-mask-avatar-status-round-32" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                    <circle fill="black" cx="0.84375" cy="0.84375" r="0.25"></circle>
+                </mask>
+                <mask id="svg-mask-avatar-status-mobile-32" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                    <rect fill="black" x="0.59375" y="0.4375" width="0.5" height="0.65625" rx="0.13125" ry="0.13125"></rect>
+                </mask>
+                <mask id="svg-mask-avatar-status-typing-32" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                    <rect fill="black" x="0.359375" y="0.59375" width="0.96875" height="0.5" rx="0.25" ry="0.25"></rect>
+                </mask>
+                <mask id="svg-mask-avatar-status-round-40" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                    <circle fill="black" cx="0.85" cy="0.85" r="0.25"></circle>
+                </mask>
+                <mask id="svg-mask-avatar-status-mobile-40" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                    <rect fill="black" x="0.6" y="0.45" width="0.5" height="0.65" rx="0.13" ry="0.13"></rect>
+                </mask>
+                <mask id="svg-mask-avatar-status-typing-40" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                    <rect fill="black" x="0.375" y="0.6" width="0.95" height="0.5" rx="0.25" ry="0.25"></rect>
+                </mask>
+                <mask id="svg-mask-avatar-status-round-80" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                    <circle fill="black" cx="0.85" cy="0.85" r="0.175"></circle>
+                </mask>
+                <mask id="svg-mask-avatar-status-mobile-80" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                    <rect fill="black" x="0.675" y="0.575" width="0.35" height="0.45" rx="0.09" ry="0.09"></rect>
+                </mask>
+                <mask id="svg-mask-avatar-status-typing-80" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                    <rect fill="black" x="0.525" y="0.675" width="0.65" height="0.35" rx="0.175" ry="0.175"></rect>
+                </mask>
+                <mask id="svg-mask-avatar-status-round-120" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                    <circle fill="black" cx="0.8333333333333334" cy="0.8333333333333334" r="0.16666666666666666"></circle>
+                </mask>
+                <mask id="svg-mask-avatar-status-mobile-120" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                    <rect fill="black" x="0.6666666666666666" y="0.5666666666666667" width="0.3333333333333333" height="0.43333333333333335" rx="0.08666666666666667" ry="0.08666666666666667"></rect>
+                </mask>
+                <mask id="svg-mask-avatar-status-typing-120" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                    <rect fill="black" x="0.5166666666666667" y="0.6666666666666666" width="0.6333333333333333" height="0.3333333333333333" rx="0.16666666666666666" ry="0.16666666666666666"></rect>
+                </mask>
+                <mask id="svg-mask-status-online-mobile" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <rect fill="white" x="0" y="0" width="1" height="1" rx="0.1875" ry="0.125"></rect>
+                    <rect fill="black" x="0.125" y="0.16666666666666666" width="0.75" height="0.5"></rect>
+                    <ellipse fill="black" cx="0.5" cy="0.8333333333333334" rx="0.125" ry="0.08333333333333333"></ellipse>
+                </mask>
+                <mask id="svg-mask-status-online" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                </mask>
+                <mask id="svg-mask-status-idle" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                    <circle fill="black" cx="0.25" cy="0.25" r="0.375"></circle>
+                </mask>
+                <mask id="svg-mask-status-dnd" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                    <rect fill="black" x="0.125" y="0.375" width="0.75" height="0.25" rx="0.125" ry="0.125"></rect>
+                </mask>
+                <mask id="svg-mask-status-offline" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                    <circle fill="black" cx="0.5" cy="0.5" r="0.25"></circle>
+                </mask>
+                <mask id="svg-mask-status-streaming" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <circle fill="white" cx="0.5" cy="0.5" r="0.5"></circle>
+                    <polygon fill="black" points="0.35,0.25 0.78301275,0.5 0.35,0.75"></polygon>
+                </mask>
+                <mask id="svg-mask-status-typing" maskContentUnits="objectBoundingBox" viewBox="0 0 1 1">
+                    <rect fill="white" cx="0" cy="0" width="1" height="1" ry="0.5" rx="0.2"></rect>
+                </mask>
+            </svg>
+            <svg viewBox="0 0 1 1" style="position: absolute; pointer-events: none; top: -1px; left: -1px; width: 1px; height: 1px;">
+                <linearGradient id="8d7352a7-15d7-4b50-9033-e59587206d39">
+                    <stop stop-color="#738ef5"></stop>
+                    <stop offset="1" stop-color="#b3aeff"></stop>
+                </linearGradient>
+                <linearGradient id="035b631c-22b0-4a1f-9fa3-e4a7e3525040">
+                    <stop stop-color="#b473f5"></stop>
+                    <stop offset="1" stop-color="#e292aa"></stop>
+                </linearGradient>
+            </svg>
+            <div class="app-19_DXt platform-web">
+                <div class="app-2rEoOp vertical-V37hAW flex-1O1GKY directionColumn-35P_nr theme-dark">
+                    <div class="layers-3iHuyZ vertical-V37hAW flex-1O1GKY directionColumn-35P_nr spacer-1fA9zc">
+                        <div role="dialog" aria-hidden="false" class="layer-3QrUeG" style="">
+                            <div class="flex-1xMQg5 flex-1O1GKY horizontal-1ae9ci horizontal-2EEEnY flex-1O1GKY directionRow-3v3tfG justifyStart-2NDFzi alignStretch-DpGPf3 noWrap-3jynv6 container-2lgZY8 firefoxFixScrollFlex-cnI2ix" style="flex: 1 1 auto;">
+                                <div class="wrapper-1Rf91z">
+                                    <div class="unreadMentionsIndicatorTop-gA6RCh">
+                                        <div class="bar-30k2ka unreadMentionsBar-1VrBNe unread-1xRYoj active-1SSsBb" style="transform: translateY(-180%);"><span class="text-2e2ZyG"></span></div>
+                                    </div>
+                                    <div class="scrollerWrap-2lJEkd firefoxFixScrollFlex-cnI2ix scrollerWrap-1IAIlv scrollerThemed-2oenus themeGhostHairline-DBD-2d">
+                                        <div class="scroller-2FKFPG firefoxFixScrollFlex-cnI2ix systemPad-3UxEGl scroller-2TZvBN">
+                                            <div class="listItem-2P_4kh">
+                                                <div class="pill-2uzAFe wrapper-sa6paO"><span class="item-2hkk8m" style="opacity: 0; height: 8px; transform: translate3d(-4px, 0px, 0px);"></span></div>
+                                                <div class="listItemWrapper-3X98Pc">
+                                                    <div class="wrapper-25eVIn">
+                                                        <svg width="48" height="48" viewBox="0 0 48 48" class="svg-1X37T1">
+                                                            <mask id="f31d0373-e38e-4f41-ac0a-4df62237698d" fill="black" x="0" y="0" width="48" height="48">
+                                                                <path d="M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24Z" fill="white"></path>
+                                                                <rect x="28" y="-4" width="24" height="24" rx="12" ry="12" transform="translate(20 -20)" fill="black"></rect>
+                                                                <rect x="28" y="28" width="24" height="24" rx="12" ry="12" transform="translate(20 20)" fill="black"></rect>
+                                                            </mask>
+                                                            <foreignObject mask="url(#f31d0373-e38e-4f41-ac0a-4df62237698d)" x="0" y="0" width="48" height="48">
+                                                                <a class="button-OhfaWu wrapper-1BJsBx" aria-label="Home" href="/activity">
+                                                                    <svg name="Nova_Discord"
+                                                                        class="homeIcon-tEMBK1" aria-hidden="false" width="28" height="20" viewBox="0 0 28 20">
+                                                                        <path fill="currentColor" d="M20.6644 20C20.6644 20 19.8014 18.9762 19.0822 18.0714C22.2226 17.1905 23.4212 15.2381 23.4212 15.2381C22.4384 15.881 21.5034 16.3334 20.6644 16.6429C19.4658 17.1429 18.3151 17.4762 17.1884 17.6667C14.887 18.0953 12.7774 17.9762 10.9795 17.6429C9.61301 17.381 8.43836 17 7.45548 16.6191C6.90411 16.4048 6.30479 16.1429 5.70548 15.8096C5.63356 15.7619 5.56164 15.7381 5.48973 15.6905C5.44178 15.6667 5.41781 15.6429 5.39384 15.6191C4.96233 15.381 4.7226 15.2143 4.7226 15.2143C4.7226 15.2143 5.87329 17.1191 8.91781 18.0238C8.19863 18.9286 7.31164 20 7.31164 20C2.0137 19.8333 0 16.381 0 16.381C0 8.7144 3.45205 2.50017 3.45205 2.50017C6.90411 -0.07123 10.1884 0.000197861 10.1884 0.000197861L10.4281 0.285909C6.11301 1.52399 4.12329 3.40493 4.12329 3.40493C4.12329 3.40493 4.65068 3.11921 5.53767 2.71446C8.10274 1.59542 10.1404 1.2859 10.9795 1.21447C11.1233 1.19066 11.2432 1.16685 11.387 1.16685C12.8493 0.976379 14.5034 0.92876 16.2295 1.11923C18.5068 1.38114 20.9521 2.0478 23.4452 3.40493C23.4452 3.40493 21.5514 1.61923 17.476 0.381146L17.8116 0.000197861C17.8116 0.000197861 21.0959 -0.07123 24.5479 2.50017C24.5479 2.50017 28 8.7144 28 16.381C28 16.381 25.9623 19.8333 20.6644 20ZM9.51712 8.88106C8.15068 8.88106 7.07192 10.0715 7.07192 11.5239C7.07192 12.9763 8.17466 14.1667 9.51712 14.1667C10.8836 14.1667 11.9623 12.9763 11.9623 11.5239C11.9863 10.0715 10.8836 8.88106 9.51712 8.88106ZM18.2671 8.88106C16.9007 8.88106 15.8219 10.0715 15.8219 11.5239C15.8219 12.9763 16.9247 14.1667 18.2671 14.1667C19.6336 14.1667 20.7123 12.9763 20.7123 11.5239C20.7123 10.0715 19.6336 8.88106 18.2671 8.88106Z"></path>
+                                                                    </svg>
+                                                                </a>
+                                                            </foreignObject>
+                                                        </svg>
+                                                        <div class="badgeWrapper-3e8pMZ"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="listItem-2P_4kh">
+                                                <div class="guildSeparator-3s64Iy"></div>
+                                            </div>
+                                            <div class="listItem-2P_4kh">
+                                                <div class="pill-31IEus wrapper-sa6paO"><span class="item-2hkk8m" style="opacity: 1; height: 40px; transform: translate3d(0px, 0px, 0px);"></span></div>
+                                                <div class="blobContainer-239gwq" draggable="true">
+                                                    <div class="wrapper-25eVIn">
+                                                        <svg width="48" height="48" viewBox="0 0 48 48" class="svg-1X37T1">
+                                                            <mask id="938cfdf4-e59c-453f-b0a4-94f123405050" fill="black" x="0" y="0" width="48" height="48">
+                                                                <path d="M0 24C0 16.5449 0 12.8174 1.21793 9.87706C2.84183 5.95662 5.95662 2.84183 9.87706 1.21793C12.8174 0 16.5449 0 24 0C31.4551 0 35.1826 0 38.1229 1.21793C42.0434 2.84183 45.1582 5.95662 46.7821 9.87706C48 12.8174 48 16.5449 48 24C48 31.4551 48 35.1826 46.7821 38.1229C45.1582 42.0434 42.0434 45.1582 38.1229 46.7821C35.1826 48 31.4551 48 24 48C16.5449 48 12.8174 48 9.87706 46.7821C5.95662 45.1582 2.84183 42.0434 1.21793 38.1229C0 35.1826 0 31.4551 0 24Z"
+                                                                    fill="white"></path>
+                                                                <rect x="28" y="-4" width="24" height="24" rx="12" ry="12" transform="translate(20 -20)" fill="black"></rect>
+                                                                <rect x="28" y="28" width="24" height="24" rx="12" ry="12" transform="translate(20 20)" fill="black"></rect>
+                                                            </mask>
+                                                            <foreignObject mask="url(#938cfdf4-e59c-453f-b0a4-94f123405050)" x="0" y="0" width="48" height="48">
+                                                                <a class="wrapper-1BJsBx" aria-label="DiscordTest" href="/channels/475658494457151490/612100064168378395"
+                                                                    style="font-size: 18px;">
+                                                                    <div class="acronym-2mOFsV selected-bZ3Lue" aria-hidden="true">TP</div>
+                                                                </a>
+                                                            </foreignObject>
+                                                        </svg>
+                                                        <div class="badgeWrapper-3e8pMZ"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="wrapper-2B2Wx1" aria-hidden="true"><span class="edge-1OJQxL"></span><span class="middle-3rAgAl"></span><span class="edge-1OJQxL"></span></div>
+                                            </div>
+                                            <div class="listItem-2P_4kh">
+                                                <div class="pill-31IEus wrapper-sa6paO"><span class="item-2hkk8m" style="opacity: 0; height: 8px; transform: translate3d(-4px, 0px, 0px);"></span></div>
+                                                <div class="blobContainer-239gwq" draggable="true">
+                                                    <div class="wrapper-25eVIn">
+                                                        <svg width="48" height="48" viewBox="0 0 48 48" class="svg-1X37T1">
+                                                            <mask id="5749dab1-9f7c-428f-ac20-84a3b6b7d3d3" fill="black" x="0" y="0" width="48" height="48">
+                                                                <path d="M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24Z" fill="white"></path>
+                                                                <rect x="28" y="-4" width="24" height="24" rx="12" ry="12" transform="translate(20 -20)" fill="black"></rect>
+                                                                <rect x="28" y="28" width="24" height="24" rx="12" ry="12" transform="translate(20 20)" fill="black"></rect>
+                                                            </mask>
+                                                            <foreignObject mask="url(#5749dab1-9f7c-428f-ac20-84a3b6b7d3d3)" x="0" y="0" width="48" height="48"><a class="wrapper-1BJsBx" aria-label="" href="#"><img
+                                                                class="icon-27yU2q" src="https://cdn.discordapp.com/icons/86004744966914048/292e7f6bfff2b71dfd13e508a859aedd.webp?size=128" alt="" width="48" height="48" aria-hidden="true"></a></foreignObject>
+                                                        </svg>
+                                                        <div class="badgeWrapper-3e8pMZ"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="wrapper-2B2Wx1" aria-hidden="true"><span class="edge-1OJQxL"></span><span class="middle-3rAgAl"></span><span class="edge-1OJQxL"></span></div>
+                                            </div>
+                                            <div class="listItem-2P_4kh">
+                                                <div class="pill-31IEus wrapper-sa6paO"><span class="item-2hkk8m" style="opacity: 0; height: 8px; transform: translate3d(-4px, 0px, 0px);"></span></div>
+                                                <div class="blobContainer-239gwq" draggable="true">
+                                                    <div class="wrapper-25eVIn">
+                                                        <svg width="48" height="48" viewBox="0 0 48 48" class="svg-1X37T1">
+                                                            <mask id="8506b585-604e-4d34-9bea-230244cd6dd2" fill="black" x="0" y="0" width="48" height="48">
+                                                                <path d="M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24Z" fill="white"></path>
+                                                                <rect x="28" y="-4" width="24" height="24" rx="12" ry="12" transform="translate(20 -20)" fill="black"></rect>
+                                                                <rect x="28" y="28" width="24" height="24" rx="12" ry="12" transform="translate(20 20)" fill="black"></rect>
+                                                            </mask>
+                                                            <foreignObject mask="url(#8506b585-604e-4d34-9bea-230244cd6dd2)" x="0" y="0" width="48" height="48"><a class="wrapper-1BJsBx" aria-label="" href="#"><img
+                                                                class="icon-27yU2q" src="https://cdn.discordapp.com/icons/280806472928198656/cbdda04c041699d80689b99c4e5e89dc.webp?size=128" alt="" width="48" height="48" aria-hidden="true"></a></foreignObject>
+                                                        </svg>
+                                                        <div class="badgeWrapper-3e8pMZ"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="wrapper-2B2Wx1" aria-hidden="true"><span class="edge-1OJQxL"></span><span class="middle-3rAgAl"></span><span class="edge-1OJQxL"></span></div>
+                                            </div>
+                                            <div class="listItem-2P_4kh">
+                                                <div class="pill-3YxEhL wrapper-sa6paO"><span class="item-2hkk8m" style="opacity: 0; height: 8px; transform: translate3d(-4px, 0px, 0px);"></span></div>
+                                                <div class="listItemWrapper-3X98Pc">
+                                                    <div class="circleButtonMask-2VNJsN wrapper-25eVIn">
+                                                        <svg width="48" height="48" viewBox="0 0 48 48" class="svg-1X37T1">
+                                                            <mask id="e56f95a1-9e8d-4add-a029-fd26750490ee" fill="black" x="0" y="0" width="48" height="48">
+                                                                <path d="M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24Z" fill="white"></path>
+                                                                <rect x="28" y="-4" width="24" height="24" rx="12" ry="12" transform="translate(20 -20)" fill="black"></rect>
+                                                                <rect x="28" y="28" width="24" height="24" rx="12" ry="12" transform="translate(20 20)" fill="black"></rect>
+                                                            </mask>
+                                                            <foreignObject mask="url(#e56f95a1-9e8d-4add-a029-fd26750490ee)" x="0" y="0" width="48" height="48">
+                                                                <div tabindex="0" class="circleIconButton-jET_ig" aria-label="Add a Server" role="button">
+                                                                    <svg name="Nova_Add" class="circleIcon-LvPL6c" aria-hidden="false" width="24" height="24" viewBox="0 0 24 24">
+                                                                        <path fill="currentColor" d="M21 11.001H13V3.00098H11V11.001H3V13.001H11V21.001H13V13.001H21V11.001Z"></path>
+                                                                    </svg>
+                                                                    <div class="wrapper-2B2Wx1" aria-hidden="true"><span class="half-1OBsd2 higher-3RVLpi"></span></div>
+                                                                </div>
+                                                            </foreignObject>
+                                                        </svg>
+                                                        <div class="badgeWrapper-3e8pMZ"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="listItem-2P_4kh">
+                                                <div class="pill-3YxEhL wrapper-sa6paO"><span class="item-2hkk8m" style="opacity: 0; height: 8px; transform: translate3d(-4px, 0px, 0px);"></span></div>
+                                                <div class="listItemWrapper-3X98Pc">
+                                                    <div class="circleButtonMask-2VNJsN wrapper-25eVIn">
+                                                        <svg width="48" height="48" viewBox="0 0 48 48" class="svg-1X37T1">
+                                                            <mask id="13389291-510d-47fd-8821-795d859b71b3" fill="black" x="0" y="0" width="48" height="48">
+                                                                <path d="M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24Z" fill="white"></path>
+                                                                <rect x="28" y="-4" width="24" height="24" rx="12" ry="12" transform="translate(20 -20)" fill="black"></rect>
+                                                                <rect x="4" y="28" width="48" height="24" rx="12" ry="12" transform="translate(20 20)" fill="black"></rect>
+                                                            </mask>
+                                                            <foreignObject mask="url(#13389291-510d-47fd-8821-795d859b71b3)" x="0" y="0" width="48" height="48">
+                                                                <div tabindex="0" class="circleIconButton-jET_ig" aria-label="Server Discovery" role="button">
+                                                                    <svg name="Search" aria-hidden="false" width="24" height="24" viewBox="0 0 18 18">
+                                                                        <g fill="none" fill-rule="evenodd">
+                                                                            <path fill="currentColor" d="M3.60091481,7.20297313 C3.60091481,5.20983419 5.20983419,3.60091481 7.20297313,3.60091481 C9.19611206,3.60091481 10.8050314,5.20983419 10.8050314,7.20297313 C10.8050314,9.19611206 9.19611206,10.8050314 7.20297313,10.8050314 C5.20983419,10.8050314 3.60091481,9.19611206 3.60091481,7.20297313 Z M12.0057176,10.8050314 L11.3733562,10.8050314 L11.1492281,10.5889079 C11.9336764,9.67638651 12.4059463,8.49170955 12.4059463,7.20297313 C12.4059463,4.32933105 10.0766152,2 7.20297313,2 C4.32933105,2 2,4.32933105 2,7.20297313 C2,10.0766152 4.32933105,12.4059463 7.20297313,12.4059463 C8.49170955,12.4059463 9.67638651,11.9336764 10.5889079,11.1492281 L10.8050314,11.3733562 L10.8050314,12.0057176 L14.8073185,16 L16,14.8073185 L12.2102538,11.0099776 L12.0057176,10.8050314 Z"></path>
+                                                                        </g>
+                                                                    </svg>
+                                                                </div>
+                                                            </foreignObject>
+                                                        </svg>
+                                                        <div class="badgeWrapper-3e8pMZ"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="unreadMentionsIndicatorBottom-BXS58x">
+                                        <div class="bar-30k2ka unreadMentionsBar-1VrBNe unread-1xRYoj active-1SSsBb" style="transform: translateY(180%);"><span class="text-2e2ZyG"></span></div>
+                                    </div>
+                                </div>
+                                <div class="flex-1xMQg5 flex-1O1GKY vertical-V37hAW flex-1O1GKY directionColumn-35P_nr justifyStart-2NDFzi alignStretch-DpGPf3 noWrap-3jynv6 base-3dtUhz" style="flex: 1 1 auto; margin-left: 0px;">
+                                    <div class="flexChild-faoVW3" style="flex: 0 0 auto;">
+                                        <div></div>
+                                    </div>
+                                    <div class="flex-1xMQg5 flex-1O1GKY horizontal-1ae9ci horizontal-2EEEnY flex-1O1GKY directionRow-3v3tfG justifyStart-2NDFzi alignStretch-DpGPf3 noWrap-3jynv6 spacer-29U_x8 firefoxFixScrollFlex-cnI2ix" style="flex: 1 1 auto;">
+                                        <div class="channels-Ie2l6A vertical-V37hAW flex-1O1GKY directionColumn-35P_nr">
+                                            <div class="container-PNkimc">
+                                                <div class="flexChild-faoVW3" style="flex: 0 0 auto;">
+                                                    <div class="container-2Rl01u hasDropdown-2invhV">
+                                                        <header class="header-2o-2hj">
+                                                            <span class="name-3YKhmS">Theme Preview</span>
+                                                            <svg width="18" height="18" class="button-1w5pas dropdown-33sEFX">
+                                                                <g fill="none" fill-rule="evenodd">
+                                                                    <path d="M0 0h18v18H0"></path>
+                                                                    <path stroke="#FFF" d="M4.5 4.5l9 9" stroke-linecap="round"></path>
+                                                                    <path stroke="#FFF" d="M13.5 4.5l-9 9" stroke-linecap="round"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </header>
+                                                    </div>
+                                                </div>
+                                                <div class="positionedContainer-l-ZqRq">
+                                                    <div class="unreadTop-73gZ2_ unread-1s3J68 container-35XQWE">
+                                                        <div class="bar-30k2ka unreadBar-3YD_k9 unread-1xRYoj active-1SSsBb" style="transform: translateY(-180%);"><span class="text-2e2ZyG">New Unreads</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="scrollerWrap-2lJEkd firefoxFixScrollFlex-cnI2ix containStyles-2a-Dzo scrollerThemed-2oenus themeGhostHairlineChannels-3G0x9_ scrollerFade-1Ijw5y">
+                                                    <div class="scroller-2FKFPG firefoxFixScrollFlex-cnI2ix systemPad-3UxEGl scroller-2wx7Hm">
+                                                        <div style="width: 100%; height: 0px; visibility: hidden;"></div>
+                                                        <div draggable="true">
+                                                            <div class="containerDefault-3GGEv_">
+                                                                <div tabindex="0" class="iconVisibility-1yaA_k wrapper-CU3qI5 clickable-18m--O" role="button">
+                                                                    <svg class="icon-WnO6o2" width="24" height="24" viewBox="0 0 24 24">
+                                                                        <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M16.59 8.59004L12 13.17L7.41 8.59004L6 10L12 16L18 10L16.59 8.59004Z"></path>
+                                                                    </svg>
+                                                                    <div class="name-IbjUBS">Text Channels</div>
+                                                                    <div class="children-13TY0l">
+                                                                        <button aria-label="Create Channel" type="button" class="addButton-1BORro forceVisible-3iHxvH button-38aScr lookBlank-3eh9lL colorBrand-3pXr91 grow-q77ONN">
+                                                                            <div class="contents-18-Yxp">
+                                                                                <svg name="PlusAlt" class="addButtonIcon-3u-3Hu" aria-hidden="false" width="18" height="18" viewBox="0 0 18 18">
+                                                                                    <polygon fill-rule="nonzero" fill="#ffffff" points="15 10 10 10 10 15 8 15 8 10 3 10 3 8 8 8 8 3 10 3 10 8 15 8"></polygon>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="containerDefault-1ZnADq" draggable="true">
+                                                            <div tabindex="0" class="iconVisibility-1bOqu7 wrapper-1ucjTd" role="button">
+                                                                <div class="content-3at_AU">
+                                                                    <svg width="24" height="24" viewBox="0 0 24 24" class="icon-1_QxNX">
+                                                                        <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z"></path>
+                                                                    </svg>
+                                                                    <div class="name-3_Dsmg">lobby</div>
+                                                                    <div class="children-Bmpf2Q">
+                                                                        <div class="iconItem-1-bXkn iconBase-2IHuka" aria-label="Create Instant Invite">
+                                                                            <div tabindex="0" role="button">
+                                                                                <svg name="Invite" class="actionIcon-2Hi9ZG" aria-hidden="false" width="16" height="16" viewBox="0 0 16 16">
+                                                                                    <path fill="currentColor" d="M14 2H16V3H14V5H13V3H11V2H13V0H14V2Z"></path>
+                                                                                    <path fill="currentColor" d="M6.5 8.00667C7.88 8.00667 9 6.88667 9 5.50667C9 4.12667 7.88 3.00667 6.5 3.00667C5.12 3.00667 4 4.12667 4 5.50667C4 6.88667 5.12 8.00667 6.5 8.00667Z"></path>
+                                                                                    <path fill="currentColor" d="M6.5 8.34C3.26 8.34 1 9.98666 1 12.34V13.0067H12V12.34C12 9.98 9.74 8.34 6.5 8.34Z"></path>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div tabindex="0" class="iconItem-1-bXkn iconBase-2IHuka" role="button" aria-label="Edit Channel">
+                                                                            <svg name="Gear" class="actionIcon-2Hi9ZG" aria-hidden="false" width="16" height="16"
+                                                                                viewBox="0 0 16 16">
+                                                                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M14 7V9C14 9 12.5867 9 12.5733 9.00667C12.42 9.58667 12.1733 10.1267 11.84 10.6067L12.74 11.5067L11.4933 12.7533L10.5933 11.8533C10.1133 12.1867 9.57334 12.44 8.99334 12.5867V14H6.99334V12.58C6.41334 12.4333 5.87334 12.18 5.39334 11.8467L4.49333 12.7467L3.24667 11.5L4.14667 10.6C3.81333 10.1267 3.56 9.58 3.41333 9H2V7H3.41333C3.56 6.42 3.81333 5.88 4.14667 5.4L3.24667 4.5L4.5 3.24667L5.4 4.14667C5.87334 3.81333 6.42 3.56 7 3.41333V2H9V3.41333C9.58 3.56667 10.12 3.81333 10.6 4.14667L11.5067 3.25333L12.7533 4.5L11.8533 5.4C12.1867 5.87334 12.44 6.42 12.5867 7H14ZM8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z"></path>
+                                                                            </svg>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="containerDefault-1ZnADq" draggable="true">
+                                                            <div tabindex="0" class="iconVisibility-1bOqu7 wrapper-1ucjTd modeUnread-1zpFdA" role="button">
+                                                                <div class="unread-3zKkbm"></div>
+                                                                <div class="content-3at_AU">
+                                                                    <svg width="24" height="24" viewBox="0 0 24 24" class="icon-1_QxNX">
+                                                                        <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z"></path>
+                                                                    </svg>
+                                                                    <div class="name-3_Dsmg">unread</div>
+                                                                    <div class="children-Bmpf2Q">
+                                                                        <div class="iconItem-1-bXkn iconBase-2IHuka" aria-label="Create Instant Invite">
+                                                                            <div tabindex="0" role="button">
+                                                                                <svg name="Invite" class="actionIcon-2Hi9ZG" aria-hidden="false" width="16" height="16" viewBox="0 0 16 16">
+                                                                                    <path fill="currentColor" d="M14 2H16V3H14V5H13V3H11V2H13V0H14V2Z"></path>
+                                                                                    <path fill="currentColor" d="M6.5 8.00667C7.88 8.00667 9 6.88667 9 5.50667C9 4.12667 7.88 3.00667 6.5 3.00667C5.12 3.00667 4 4.12667 4 5.50667C4 6.88667 5.12 8.00667 6.5 8.00667Z"></path>
+                                                                                    <path fill="currentColor" d="M6.5 8.34C3.26 8.34 1 9.98666 1 12.34V13.0067H12V12.34C12 9.98 9.74 8.34 6.5 8.34Z"></path>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div tabindex="0" class="iconItem-1-bXkn iconBase-2IHuka" role="button" aria-label="Edit Channel">
+                                                                            <svg name="Gear" class="actionIcon-2Hi9ZG" aria-hidden="false" width="16" height="16"
+                                                                                viewBox="0 0 16 16">
+                                                                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M14 7V9C14 9 12.5867 9 12.5733 9.00667C12.42 9.58667 12.1733 10.1267 11.84 10.6067L12.74 11.5067L11.4933 12.7533L10.5933 11.8533C10.1133 12.1867 9.57334 12.44 8.99334 12.5867V14H6.99334V12.58C6.41334 12.4333 5.87334 12.18 5.39334 11.8467L4.49333 12.7467L3.24667 11.5L4.14667 10.6C3.81333 10.1267 3.56 9.58 3.41333 9H2V7H3.41333C3.56 6.42 3.81333 5.88 4.14667 5.4L3.24667 4.5L4.5 3.24667L5.4 4.14667C5.87334 3.81333 6.42 3.56 7 3.41333V2H9V3.41333C9.58 3.56667 10.12 3.81333 10.6 4.14667L11.5067 3.25333L12.7533 4.5L11.8533 5.4C12.1867 5.87334 12.44 6.42 12.5867 7H14ZM8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z"></path>
+                                                                            </svg>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="containerDefault-1ZnADq" draggable="true">
+                                                            <div tabindex="0" class="iconVisibility-1bOqu7 wrapper-1ucjTd" role="button">
+                                                                <div class="content-3at_AU">
+                                                                    <svg width="24" height="24" viewBox="0 0 24 24" class="icon-1_QxNX">
+                                                                        <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z"></path>
+                                                                    </svg>
+                                                                    <div class="name-3_Dsmg">muted-channel</div>
+                                                                    <div class="children-Bmpf2Q">
+                                                                        <div class="iconItem-1-bXkn iconBase-2IHuka" aria-label="Create Instant Invite">
+                                                                            <div tabindex="0" role="button">
+                                                                                <svg name="Invite" class="actionIcon-2Hi9ZG" aria-hidden="false" width="16" height="16" viewBox="0 0 16 16">
+                                                                                    <path fill="currentColor" d="M14 2H16V3H14V5H13V3H11V2H13V0H14V2Z"></path>
+                                                                                    <path fill="currentColor" d="M6.5 8.00667C7.88 8.00667 9 6.88667 9 5.50667C9 4.12667 7.88 3.00667 6.5 3.00667C5.12 3.00667 4 4.12667 4 5.50667C4 6.88667 5.12 8.00667 6.5 8.00667Z"></path>
+                                                                                    <path fill="currentColor" d="M6.5 8.34C3.26 8.34 1 9.98666 1 12.34V13.0067H12V12.34C12 9.98 9.74 8.34 6.5 8.34Z"></path>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div tabindex="0" class="iconItem-1-bXkn iconBase-2IHuka" role="button" aria-label="Edit Channel">
+                                                                            <svg name="Gear" class="actionIcon-2Hi9ZG" aria-hidden="false" width="16" height="16"
+                                                                                viewBox="0 0 16 16">
+                                                                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M14 7V9C14 9 12.5867 9 12.5733 9.00667C12.42 9.58667 12.1733 10.1267 11.84 10.6067L12.74 11.5067L11.4933 12.7533L10.5933 11.8533C10.1133 12.1867 9.57334 12.44 8.99334 12.5867V14H6.99334V12.58C6.41334 12.4333 5.87334 12.18 5.39334 11.8467L4.49333 12.7467L3.24667 11.5L4.14667 10.6C3.81333 10.1267 3.56 9.58 3.41333 9H2V7H3.41333C3.56 6.42 3.81333 5.88 4.14667 5.4L3.24667 4.5L4.5 3.24667L5.4 4.14667C5.87334 3.81333 6.42 3.56 7 3.41333V2H9V3.41333C9.58 3.56667 10.12 3.81333 10.6 4.14667L11.5067 3.25333L12.7533 4.5L11.8533 5.4C12.1867 5.87334 12.44 6.42 12.5867 7H14ZM8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z"></path>
+                                                                            </svg>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="containerDefault-1ZnADq" draggable="true">
+                                                            <div tabindex="0" class="iconVisibility-1bOqu7 wrapper-1ucjTd" role="button">
+                                                                <div class="content-3at_AU">
+                                                                    <svg width="24" height="24" viewBox="0 0 24 24" class="icon-1_QxNX">
+                                                                        <path fill="currentColor" d="M14 8C14 7.44772 13.5523 7 13 7H9.76001L10.3657 3.58738C10.4201 3.28107 10.1845 3 9.87344 3H8.88907C8.64664 3 8.43914 3.17391 8.39677 3.41262L7.76001 7H4.18011C3.93722 7 3.72946 7.17456 3.68759 7.41381L3.51259 8.41381C3.45905 8.71977 3.69449 9 4.00511 9H7.41001L6.35001 15H2.77011C2.52722 15 2.31946 15.1746 2.27759 15.4138L2.10259 16.4138C2.04905 16.7198 2.28449 17 2.59511 17H6.00001L5.39427 20.4126C5.3399 20.7189 5.57547 21 5.88657 21H6.87094C7.11337 21 7.32088 20.8261 7.36325 20.5874L8.00001 17H14L13.3943 20.4126C13.3399 20.7189 13.5755 21 13.8866 21H14.8709C15.1134 21 15.3209 20.8261 15.3632 20.5874L16 17H19.5799C19.8228 17 20.0306 16.8254 20.0724 16.5862L20.2474 15.5862C20.301 15.2802 20.0655 15 19.7549 15H16.35L16.6758 13.1558C16.7823 12.5529 16.3186 12 15.7063 12C15.2286 12 14.8199 12.3429 14.7368 12.8133L14.3504 15H8.35045L9.41045 9H13C13.5523 9 14 8.55228 14 8Z"></path>
+                                                                        <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M19.8914 3.80204L22.2438 8.55654C22.5726 9.22119 22.0891 9.99999 21.3475 10L16.6179 10C15.8745 10 15.391 9.21769 15.7235 8.55279L18.1007 3.79829C18.4701 3.05951 19.5251 3.06172 19.8914 3.80204ZM18.4998 5H19.4999V7.5H18.4999L18.4998 5ZM18.4998 8.49887C18.4998 8.77589 18.7238 9 18.9998 9C19.2759 9 19.4999 8.77589 19.4999 8.49887C19.4999 8.22224 19.2759 7.99773 18.9998 7.99773C18.7238 7.99773 18.4998 8.22224 18.4998 8.49887Z"></path>
+                                                                    </svg>
+                                                                    <div class="name-3_Dsmg">not-safe-for-work</div>
+                                                                    <div class="children-Bmpf2Q">
+                                                                        <div class="iconItem-1-bXkn iconBase-2IHuka" aria-label="Create Instant Invite">
+                                                                            <div tabindex="0" role="button">
+                                                                                <svg name="Invite" class="actionIcon-2Hi9ZG" aria-hidden="false" width="16" height="16" viewBox="0 0 16 16">
+                                                                                    <path fill="currentColor" d="M14 2H16V3H14V5H13V3H11V2H13V0H14V2Z"></path>
+                                                                                    <path fill="currentColor" d="M6.5 8.00667C7.88 8.00667 9 6.88667 9 5.50667C9 4.12667 7.88 3.00667 6.5 3.00667C5.12 3.00667 4 4.12667 4 5.50667C4 6.88667 5.12 8.00667 6.5 8.00667Z"></path>
+                                                                                    <path fill="currentColor" d="M6.5 8.34C3.26 8.34 1 9.98666 1 12.34V13.0067H12V12.34C12 9.98 9.74 8.34 6.5 8.34Z"></path>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div tabindex="0" class="iconItem-1-bXkn iconBase-2IHuka" role="button" aria-label="Edit Channel">
+                                                                            <svg name="Gear" class="actionIcon-2Hi9ZG" aria-hidden="false" width="16" height="16"
+                                                                                viewBox="0 0 16 16">
+                                                                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M14 7V9C14 9 12.5867 9 12.5733 9.00667C12.42 9.58667 12.1733 10.1267 11.84 10.6067L12.74 11.5067L11.4933 12.7533L10.5933 11.8533C10.1133 12.1867 9.57334 12.44 8.99334 12.5867V14H6.99334V12.58C6.41334 12.4333 5.87334 12.18 5.39334 11.8467L4.49333 12.7467L3.24667 11.5L4.14667 10.6C3.81333 10.1267 3.56 9.58 3.41333 9H2V7H3.41333C3.56 6.42 3.81333 5.88 4.14667 5.4L3.24667 4.5L4.5 3.24667L5.4 4.14667C5.87334 3.81333 6.42 3.56 7 3.41333V2H9V3.41333C9.58 3.56667 10.12 3.81333 10.6 4.14667L11.5067 3.25333L12.7533 4.5L11.8533 5.4C12.1867 5.87334 12.44 6.42 12.5867 7H14ZM8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z"></path>
+                                                                            </svg>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="containerDefault-1ZnADq selected-37j_iU" draggable="true">
+                                                            <div tabindex="0" class="iconVisibility-1bOqu7 wrapper-1ucjTd modeSelected-1zApJ_" role="button">
+                                                                <div class="content-3at_AU">
+                                                                    <svg width="24" height="24" viewBox="0 0 24 24" class="icon-1_QxNX">
+                                                                        <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z"></path>
+                                                                    </svg>
+                                                                    <div class="name-3_Dsmg">current-channel</div>
+                                                                    <div class="children-Bmpf2Q">
+                                                                        <div class="iconItem-1-bXkn iconBase-2IHuka" aria-label="Create Instant Invite">
+                                                                            <div tabindex="0" role="button">
+                                                                                <svg name="Invite" class="actionIcon-2Hi9ZG" aria-hidden="false" width="16" height="16" viewBox="0 0 16 16">
+                                                                                    <path fill="currentColor" d="M14 2H16V3H14V5H13V3H11V2H13V0H14V2Z"></path>
+                                                                                    <path fill="currentColor" d="M6.5 8.00667C7.88 8.00667 9 6.88667 9 5.50667C9 4.12667 7.88 3.00667 6.5 3.00667C5.12 3.00667 4 4.12667 4 5.50667C4 6.88667 5.12 8.00667 6.5 8.00667Z"></path>
+                                                                                    <path fill="currentColor" d="M6.5 8.34C3.26 8.34 1 9.98666 1 12.34V13.0067H12V12.34C12 9.98 9.74 8.34 6.5 8.34Z"></path>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div tabindex="0" class="iconItem-1-bXkn iconBase-2IHuka" role="button" aria-label="Edit Channel">
+                                                                            <svg name="Gear" class="actionIcon-2Hi9ZG" aria-hidden="false" width="16" height="16"
+                                                                                viewBox="0 0 16 16">
+                                                                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M14 7V9C14 9 12.5867 9 12.5733 9.00667C12.42 9.58667 12.1733 10.1267 11.84 10.6067L12.74 11.5067L11.4933 12.7533L10.5933 11.8533C10.1133 12.1867 9.57334 12.44 8.99334 12.5867V14H6.99334V12.58C6.41334 12.4333 5.87334 12.18 5.39334 11.8467L4.49333 12.7467L3.24667 11.5L4.14667 10.6C3.81333 10.1267 3.56 9.58 3.41333 9H2V7H3.41333C3.56 6.42 3.81333 5.88 4.14667 5.4L3.24667 4.5L4.5 3.24667L5.4 4.14667C5.87334 3.81333 6.42 3.56 7 3.41333V2H9V3.41333C9.58 3.56667 10.12 3.81333 10.6 4.14667L11.5067 3.25333L12.7533 4.5L11.8533 5.4C12.1867 5.87334 12.44 6.42 12.5867 7H14ZM8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z"></path>
+                                                                            </svg>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="containerDefault-3GGEv_" draggable="true">
+                                                            <div tabindex="0" class="iconVisibility-1yaA_k wrapper-CU3qI5 clickable-18m--O" role="button">
+                                                                <svg class="icon-WnO6o2" width="24" height="24" viewBox="0 0 24 24">
+                                                                    <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M16.59 8.59004L12 13.17L7.41 8.59004L6 10L12 16L18 10L16.59 8.59004Z"></path>
+                                                                </svg>
+                                                                <div class="name-IbjUBS">Voice Channels</div>
+                                                                <div class="children-13TY0l">
+                                                                    <button aria-label="Create Channel" type="button" class="addButton-1BORro forceVisible-3iHxvH button-38aScr lookBlank-3eh9lL colorBrand-3pXr91 grow-q77ONN">
+                                                                        <div class="contents-18-Yxp">
+                                                                            <svg name="PlusAlt" class="addButtonIcon-3u-3Hu" aria-hidden="false" width="18" height="18" viewBox="0 0 18 18">
+                                                                                <polygon fill-rule="nonzero" fill="#ffffff" points="15 10 10 10 10 15 8 15 8 10 3 10 3 8 8 8 8 3 10 3 10 8 15 8"></polygon>
+                                                                            </svg>
+                                                                        </div>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="containerDefault-1ZnADq" draggable="true">
+                                                            <div tabindex="0" class="iconVisibility-1bOqu7 wrapper-1ucjTd" role="button">
+                                                                <div class="content-3at_AU">
+                                                                    <svg name="Speaker" class="icon-1_QxNX" aria-hidden="false" width="24" height="24" viewBox="0 0 24 24">
+                                                                        <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M11.383 3.07904C11.009 2.92504 10.579 3.01004 10.293 3.29604L6 8.00204H3C2.45 8.00204 2 8.45304 2 9.00204V15.002C2 15.552 2.45 16.002 3 16.002H6L10.293 20.71C10.579 20.996 11.009 21.082 11.383 20.927C11.757 20.772 12 20.407 12 20.002V4.00204C12 3.59904 11.757 3.23204 11.383 3.07904ZM14 5.00195V7.00195C16.757 7.00195 19 9.24595 19 12.002C19 14.759 16.757 17.002 14 17.002V19.002C17.86 19.002 21 15.863 21 12.002C21 8.14295 17.86 5.00195 14 5.00195ZM14 9.00195C15.654 9.00195 17 10.349 17 12.002C17 13.657 15.654 15.002 14 15.002V13.002C14.551 13.002 15 12.553 15 12.002C15 11.451 14.551 11.002 14 11.002V9.00195Z"></path>
+                                                                    </svg>
+                                                                    <div class="name-3_Dsmg">User limit voice channel</div>
+                                                                    <div class="children-Bmpf2Q">
+                                                                        <div class="iconItem-1-bXkn iconBase-2IHuka" aria-label="Create Instant Invite">
+                                                                            <div tabindex="0" role="button">
+                                                                                <svg name="Invite" class="actionIcon-2Hi9ZG" aria-hidden="false" width="16" height="16" viewBox="0 0 16 16">
+                                                                                    <path fill="currentColor" d="M14 2H16V3H14V5H13V3H11V2H13V0H14V2Z"></path>
+                                                                                    <path fill="currentColor" d="M6.5 8.00667C7.88 8.00667 9 6.88667 9 5.50667C9 4.12667 7.88 3.00667 6.5 3.00667C5.12 3.00667 4 4.12667 4 5.50667C4 6.88667 5.12 8.00667 6.5 8.00667Z"></path>
+                                                                                    <path fill="currentColor" d="M6.5 8.34C3.26 8.34 1 9.98666 1 12.34V13.0067H12V12.34C12 9.98 9.74 8.34 6.5 8.34Z"></path>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div tabindex="0" class="iconItem-1-bXkn iconBase-2IHuka" role="button" aria-label="Edit Channel">
+                                                                            <svg name="Gear" class="actionIcon-2Hi9ZG" aria-hidden="false" width="16" height="16"
+                                                                                viewBox="0 0 16 16">
+                                                                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M14 7V9C14 9 12.5867 9 12.5733 9.00667C12.42 9.58667 12.1733 10.1267 11.84 10.6067L12.74 11.5067L11.4933 12.7533L10.5933 11.8533C10.1133 12.1867 9.57334 12.44 8.99334 12.5867V14H6.99334V12.58C6.41334 12.4333 5.87334 12.18 5.39334 11.8467L4.49333 12.7467L3.24667 11.5L4.14667 10.6C3.81333 10.1267 3.56 9.58 3.41333 9H2V7H3.41333C3.56 6.42 3.81333 5.88 4.14667 5.4L3.24667 4.5L4.5 3.24667L5.4 4.14667C5.87334 3.81333 6.42 3.56 7 3.41333V2H9V3.41333C9.58 3.56667 10.12 3.81333 10.6 4.14667L11.5067 3.25333L12.7533 4.5L11.8533 5.4C12.1867 5.87334 12.44 6.42 12.5867 7H14ZM8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z"></path>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <div class="userLimit-64AFxe">
+                                                                            <div class="wrapper-pZmgj4"><span class="users-i_3-kL">00</span><span class="total-3tKGEB">26</span></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="containerDefault-1ZnADq" draggable="true">
+                                                            <div tabindex="0" class="iconVisibility-1bOqu7 wrapper-1ucjTd" role="button">
+                                                                <div class="content-3at_AU">
+                                                                    <svg width="24" height="24" viewBox="0 0 24 24" class="icon-1_QxNX">
+                                                                        <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M15 12C15 12.0007 15 12.0013 15 12.002C15 12.553 14.551 13.002 14 13.002V15.002C15.654 15.002 17 13.657 17 12.002C17 12.0013 17 12.0007 17 12H15ZM19 12C19 12.0007 19 12.0013 19 12.002C19 14.759 16.757 17.002 14 17.002V19.002C17.86 19.002 21 15.863 21 12.002C21 12.0013 21 12.0007 21 12H19ZM10.293 3.29604C10.579 3.01004 11.009 2.92504 11.383 3.07904C11.757 3.23204 12 3.59904 12 4.00204V20.002C12 20.407 11.757 20.772 11.383 20.927C11.009 21.082 10.579 20.996 10.293 20.71L6 16.002H3C2.45 16.002 2 15.552 2 15.002V9.00204C2 8.45304 2.45 8.00204 3 8.00204H6L10.293 3.29604Z"></path>
+                                                                        <path fill="currentColor" d="M21.025 5V4C21.025 2.88 20.05 2 19 2C17.95 2 17 2.88 17 4V5C16.4477 5 16 5.44772 16 6V9C16 9.55228 16.4477 10 17 10H19H21C21.5523 10 22 9.55228 22 9V5.975C22 5.43652 21.5635 5 21.025 5ZM20 5H18V4C18 3.42857 18.4667 3 19 3C19.5333 3 20 3.42857 20 4V5Z"></path>
+                                                                    </svg>
+                                                                    <div class="name-3_Dsmg">Locked voice</div>
+                                                                    <div class="children-Bmpf2Q">
+                                                                        <div class="iconItem-1-bXkn iconBase-2IHuka" aria-label="Create Instant Invite">
+                                                                            <div tabindex="0" role="button">
+                                                                                <svg name="Invite" class="actionIcon-2Hi9ZG" aria-hidden="false" width="16" height="16" viewBox="0 0 16 16">
+                                                                                    <path fill="currentColor" d="M14 2H16V3H14V5H13V3H11V2H13V0H14V2Z"></path>
+                                                                                    <path fill="currentColor" d="M6.5 8.00667C7.88 8.00667 9 6.88667 9 5.50667C9 4.12667 7.88 3.00667 6.5 3.00667C5.12 3.00667 4 4.12667 4 5.50667C4 6.88667 5.12 8.00667 6.5 8.00667Z"></path>
+                                                                                    <path fill="currentColor" d="M6.5 8.34C3.26 8.34 1 9.98666 1 12.34V13.0067H12V12.34C12 9.98 9.74 8.34 6.5 8.34Z"></path>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div tabindex="0" class="iconItem-1-bXkn iconBase-2IHuka" role="button" aria-label="Edit Channel">
+                                                                            <svg name="Gear" class="actionIcon-2Hi9ZG" aria-hidden="false" width="16" height="16"
+                                                                                viewBox="0 0 16 16">
+                                                                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M14 7V9C14 9 12.5867 9 12.5733 9.00667C12.42 9.58667 12.1733 10.1267 11.84 10.6067L12.74 11.5067L11.4933 12.7533L10.5933 11.8533C10.1133 12.1867 9.57334 12.44 8.99334 12.5867V14H6.99334V12.58C6.41334 12.4333 5.87334 12.18 5.39334 11.8467L4.49333 12.7467L3.24667 11.5L4.14667 10.6C3.81333 10.1267 3.56 9.58 3.41333 9H2V7H3.41333C3.56 6.42 3.81333 5.88 4.14667 5.4L3.24667 4.5L4.5 3.24667L5.4 4.14667C5.87334 3.81333 6.42 3.56 7 3.41333V2H9V3.41333C9.58 3.56667 10.12 3.81333 10.6 4.14667L11.5067 3.25333L12.7533 4.5L11.8533 5.4C12.1867 5.87334 12.44 6.42 12.5867 7H14ZM8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z"></path>
+                                                                            </svg>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="width: 100%; height: 16px; visibility: hidden;"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="unreadBottom-3hWQ7c unread-1s3J68 container-35XQWE">
+                                                    <div class="bar-30k2ka unreadBar-3YD_k9 unread-1xRYoj active-1SSsBb" style="transform: translateY(180%);"><span class="text-2e2ZyG">New Unreads</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="container-3baos1">
+                                                <div tabindex="0" aria-controls="popout_1" aria-expanded="false" aria-label="Set Status" role="button">
+                                                    <div tabindex="0" aria-label="Set Status" class="avatarWrapper-2yR4wp" role="button">
+                                                        <div class="avatar-SmRMf2 wrapper-3t9DeA" role="img" aria-label="User, Online" aria-hidden="false" style="width: 32px; height: 32px;">
+                                                            <svg width="40" height="32" viewBox="0 0 40 32" class="mask-1l8v16"
+                                                                aria-hidden="true">
+                                                                <foreignObject x="0" y="0" width="32" height="32" mask="url(#svg-mask-avatar-status-round-32)"><img src="https://support.discordapp.com/hc/user_images/l12c7vKVRCd-XLIdDkLUDg.png" alt=" " class="avatar-VxgULZ"
+                                                                    aria-hidden="true"></foreignObject>
+                                                                <rect width="10" height="10" x="22" y="22" fill="#43b581" mask="url(#svg-mask-status-online)" class="pointerEvents-2zdfdO"></rect>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="nameTag-3uD-yy">
+                                                    <div class="colorStandard-2KCXvj size14-e6ZScH usernameContainer-1fp4nu"><span class="username-2BIRiC">User</span></div>
+                                                    <div class="size10-tblYdA subtext-3ECeS_ discriminator-3-Lf_x">#0240</div>
+                                                </div>
+                                                <div class="flex-1xMQg5 flex-1O1GKY horizontal-1ae9ci horizontal-2EEEnY flex-1O1GKY directionRow-3v3tfG justifyStart-2NDFzi alignStretch-DpGPf3 noWrap-3jynv6" style="flex: 0 1 auto;">
+                                                    <button aria-label="Unmute"
+                                                        type="button" class="button-2JbWXs button-38aScr lookBlank-3eh9lL colorBrand-3pXr91 grow-q77ONN">
+                                                        <div class="contents-18-Yxp">
+                                                            <svg class="buttonIcon-onTTxP" name="Nova_MicrophoneMute" aria-hidden="false" width="24" height="24" viewBox="0 0 24 24">
+                                                                <path d="M6.7 11H5C5 12.19 5.34 13.3 5.9 14.28L7.13 13.05C6.86 12.43 6.7 11.74 6.7 11Z" fill="currentColor"></path>
+                                                                <path d="M9.01 11.085C9.015 11.1125 9.02 11.14 9.02 11.17L15 5.18V5C15 3.34 13.66 2 12 2C10.34 2 9 3.34 9 5V11C9 11.03 9.005 11.0575 9.01 11.085Z" fill="currentColor"></path>
+                                                                <path d="M11.7237 16.0927L10.9632 16.8531L10.2533 17.5688C10.4978 17.633 10.747 17.6839 11 17.72V22H13V17.72C16.28 17.23 19 14.41 19 11H17.3C17.3 14 14.76 16.1 12 16.1C11.9076 16.1 11.8155 16.0975 11.7237 16.0927Z"
+                                                                    fill="currentColor"></path>
+                                                                <path d="M21 4.27L19.73 3L3 19.73L4.27 21L8.46 16.82L9.69 15.58L11.35 13.92L14.99 10.28L21 4.27Z" class="red-vQUUL4" fill="currentColor"></path>
+                                                            </svg>
+                                                        </div>
+                                                    </button>
+                                                    <button aria-label="Deafen" type="button" class="button-2JbWXs button-38aScr lookBlank-3eh9lL colorBrand-3pXr91 grow-q77ONN">
+                                                        <div class="contents-18-Yxp">
+                                                            <svg class="buttonIcon-onTTxP" name="Nova_Headset" aria-hidden="false" width="24" height="24" viewBox="0 0 24 24">
+                                                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                                                    <path d="M12 2.00305C6.486 2.00305 2 6.48805 2 12.0031V20.0031C2 21.1071 2.895 22.0031 4 22.0031H6C7.104 22.0031 8 21.1071 8 20.0031V17.0031C8 15.8991 7.104 15.0031 6 15.0031H4V12.0031C4 7.59105 7.589 4.00305 12 4.00305C16.411 4.00305 20 7.59105 20 12.0031V15.0031H18C16.896 15.0031 16 15.8991 16 17.0031V20.0031C16 21.1071 16.896 22.0031 18 22.0031H20C21.104 22.0031 22 21.1071 22 20.0031V12.0031C22 6.48805 17.514 2.00305 12 2.00305Z"
+                                                                        fill="currentColor"></path>
+                                                                </svg>
+                                                            </svg>
+                                                        </div>
+                                                    </button>
+                                                    <button aria-label="User Settings" type="button" class="button-2JbWXs button-38aScr lookBlank-3eh9lL colorBrand-3pXr91 grow-q77ONN">
+                                                        <div class="contents-18-Yxp">
+                                                            <svg class="buttonIcon-onTTxP" name="Gear" aria-hidden="false" width="24" height="24" viewBox="0 0 24 24">
+                                                                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M19.738 10H22V14H19.739C19.498 14.931 19.1 15.798 18.565 16.564L20 18L18 20L16.565 18.564C15.797 19.099 14.932 19.498 14 19.738V22H10V19.738C9.069 19.498 8.203 19.099 7.436 18.564L6 20L4 18L5.436 16.564C4.901 15.799 4.502 14.932 4.262 14H2V10H4.262C4.502 9.068 4.9 8.202 5.436 7.436L4 6L6 4L7.436 5.436C8.202 4.9 9.068 4.502 10 4.262V2H14V4.261C14.932 4.502 15.797 4.9 16.565 5.435L18 3.999L20 5.999L18.564 7.436C19.099 8.202 19.498 9.069 19.738 10ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"></path>
+                                                            </svg>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="chat-3bRxxu firefoxFixScrollFlex-cnI2ix">
+                                            <div class="title-3qD0b- container-1r6BKw">
+                                                <div class="children-19S4PO">
+                                                    <div class="iconWrapper-2OrFZ1" role="button">
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" class="icon-22AiRD">
+                                                            <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <h3 role="button" class="title-29uC1r base-1x0h_U size16-1P40sf">current-channel</h3>
+                                                </div>
+                                                <div class="toolbar-1t6TWx">
+                                                    <div tabindex="0" class="iconWrapper-2OrFZ1 clickable-3rdHwn" role="switch" aria-label="Muting a channel prevents unread indicators and notifications from appearing unless you are mentioned.
+                                                        "
+                                                        aria-checked="false" aria-roledescription="Channel Mute Switch">
+                                                        <svg x="0" y="0" name="Nova_Bell" class="icon-22AiRD" aria-hidden="false" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                            <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M18 9V14C18 15.657 19.344 17 21 17V18H3V17C4.656 17 6 15.657 6 14V9C6 5.686 8.686 3 12 3C15.314 3 18 5.686 18 9ZM11.9999 21C10.5239 21 9.24793 20.19 8.55493 19H15.4449C14.7519 20.19 13.4759 21 11.9999 21Z"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div tabindex="0" class="iconWrapper-2OrFZ1 clickable-3rdHwn" role="button" aria-label="Pinned Messages">
+                                                        <svg x="0" y="0" name="Nova_Pin" class="icon-22AiRD" aria-hidden="false" width="24" height="24"
+                                                            viewBox="0 0 24 24">
+                                                            <path fill="currentColor" d="M22 12L12.101 2.10101L10.686 3.51401L12.101 4.92901L7.15096 9.87801V9.88001L5.73596 8.46501L4.32196 9.88001L8.56496 14.122L2.90796 19.778L4.32196 21.192L9.97896 15.536L14.222 19.778L15.636 18.364L14.222 16.95L19.171 12H19.172L20.586 13.414L22 12Z"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div tabindex="0" class="iconWrapper-2OrFZ1 clickable-3rdHwn selected-1GqIat" role="button" aria-label="Member List">
+                                                        <svg x="0" y="0" name="Nova_People" class="icon-22AiRD" aria-hidden="false" width="24"
+                                                            height="24" viewBox="0 0 24 24">
+                                                            <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M14 8.00598C14 10.211 12.206 12.006 10 12.006C7.795 12.006 6 10.211 6 8.00598C6 5.80098 7.794 4.00598 10 4.00598C12.206 4.00598 14 5.80098 14 8.00598ZM2 19.006C2 15.473 5.29 13.006 10 13.006C14.711 13.006 18 15.473 18 19.006V20.006H2V19.006Z"></path>
+                                                            <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M14 8.00598C14 10.211 12.206 12.006 10 12.006C7.795 12.006 6 10.211 6 8.00598C6 5.80098 7.794 4.00598 10 4.00598C12.206 4.00598 14 5.80098 14 8.00598ZM2 19.006C2 15.473 5.29 13.006 10 13.006C14.711 13.006 18 15.473 18 19.006V20.006H2V19.006Z"></path>
+                                                            <path fill="currentColor" d="M20.0001 20.006H22.0001V19.006C22.0001 16.4433 20.2697 14.4415 17.5213 13.5352C19.0621 14.9127 20.0001 16.8059 20.0001 19.006V20.006Z"></path>
+                                                            <path fill="currentColor" d="M14.8834 11.9077C16.6657 11.5044 18.0001 9.9077 18.0001 8.00598C18.0001 5.96916 16.4693 4.28218 14.4971 4.0367C15.4322 5.09511 16.0001 6.48524 16.0001 8.00598C16.0001 9.44888 15.4889 10.7742 14.6378 11.8102C14.7203 11.8418 14.8022 11.8743 14.8834 11.9077Z"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="search-36MZv-">
+                                                        <div tabindex="0" class="search-2oPWTC" role="button">
+                                                            <div class="searchBar-3dMhjb">
+                                                                <div class="DraftEditor-root">
+                                                                    <div class="public-DraftEditorPlaceholder-root">
+                                                                        <div class="public-DraftEditorPlaceholder-inner" id="placeholder-58da5" style="white-space: pre-wrap;">Search</div>
+                                                                    </div>
+                                                                    <div class="DraftEditor-editorContainer">
+                                                                        <div aria-describedby="placeholder-58da5" class="notranslate public-DraftEditor-content" contenteditable="true" role="textbox" spellcheck="false" style="outline: none; user-select: text; white-space: pre-wrap; overflow-wrap: break-word;">
+                                                                            <div data-contents="true">
+                                                                                <div class="" data-block="true" data-editor="58da5" data-offset-key="d854-0-0">
+                                                                                    <div data-offset-key="d854-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="d854-0-0"><br data-text="true"></span></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div tabindex="0" class="icon-38sknP iconLayout-1WxHy4 small-1lPjda" role="button">
+                                                                    <div class="iconContainer-O4O2CN">
+                                                                        <svg name="Search" class="icon-3cZ1F_ visible-3V0mGj" aria-hidden="false" width="18" height="18" viewBox="0 0 18 18">
+                                                                            <g fill="none" fill-rule="evenodd">
+                                                                                <path fill="currentColor" d="M3.60091481,7.20297313 C3.60091481,5.20983419 5.20983419,3.60091481 7.20297313,3.60091481 C9.19611206,3.60091481 10.8050314,5.20983419 10.8050314,7.20297313 C10.8050314,9.19611206 9.19611206,10.8050314 7.20297313,10.8050314 C5.20983419,10.8050314 3.60091481,9.19611206 3.60091481,7.20297313 Z M12.0057176,10.8050314 L11.3733562,10.8050314 L11.1492281,10.5889079 C11.9336764,9.67638651 12.4059463,8.49170955 12.4059463,7.20297313 C12.4059463,4.32933105 10.0766152,2 7.20297313,2 C4.32933105,2 2,4.32933105 2,7.20297313 C2,10.0766152 4.32933105,12.4059463 7.20297313,12.4059463 C8.49170955,12.4059463 9.67638651,11.9336764 10.5889079,11.1492281 L10.8050314,11.3733562 L10.8050314,12.0057176 L14.8073185,16 L16,14.8073185 L12.2102538,11.0099776 L12.0057176,10.8050314 Z"></path>
+                                                                            </g>
+                                                                        </svg>
+                                                                        <svg name="Close" class="icon-3cZ1F_" aria-hidden="false" width="12" height="12" viewBox="0 0 12 12">
+                                                                            <g fill="none" fill-rule="evenodd">
+                                                                                <path d="M0 0h12v12H0"></path>
+                                                                                <path class="fill" fill="currentColor" d="M9.5 3.205L8.795 2.5 6 5.295 3.205 2.5l-.705.705L5.295 6 2.5 8.795l.705.705L6 6.705 8.795 9.5l.705-.705L6.705 6"></path>
+                                                                            </g>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div tabindex="0" class="iconWrapper-2OrFZ1 clickable-3rdHwn" role="button" aria-label="Mentions">
+                                                        <svg x="0" y="0" name="Nova_At" class="icon-22AiRD" aria-hidden="false" width="24" height="24" viewBox="0 0 24 24">
+                                                            <path fill="currentColor" d="M12 2C6.486 2 2 6.486 2 12C2 17.515 6.486 22 12 22C14.039 22 15.993 21.398 17.652 20.259L16.521 18.611C15.195 19.519 13.633 20 12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12V12.782C20 14.17 19.402 15 18.4 15L18.398 15.018C18.338 15.005 18.273 15 18.209 15H18C17.437 15 16.6 14.182 16.6 13.631V12C16.6 9.464 14.537 7.4 12 7.4C9.463 7.4 7.4 9.463 7.4 12C7.4 14.537 9.463 16.6 12 16.6C13.234 16.6 14.35 16.106 15.177 15.313C15.826 16.269 16.93 17 18 17L18.002 16.981C18.064 16.994 18.129 17 18.195 17H18.4C20.552 17 22 15.306 22 12.782V12C22 6.486 17.514 2 12 2ZM12 14.599C10.566 14.599 9.4 13.433 9.4 11.999C9.4 10.565 10.566 9.399 12 9.399C13.434 9.399 14.6 10.565 14.6 11.999C14.6 13.433 13.434 14.599 12 14.599Z"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <a class="anchor-3Z-8Bb anchorUnderlineOnHover-2ESHQB" href="https://support.discordapp.com" rel="noreferrer noopener" target="_blank">
+                                                        <div tabindex="0" class="iconWrapper-2OrFZ1 clickable-3rdHwn" role="button" aria-label="Help">
+                                                            <svg x="0" y="0" name="Nova_Help" class="icon-22AiRD" aria-hidden="false" width="24" height="24"
+                                                                viewBox="0 0 24 24">
+                                                                <path fill="currentColor" d="M12 2C6.486 2 2 6.487 2 12C2 17.515 6.486 22 12 22C17.514 22 22 17.515 22 12C22 6.487 17.514 2 12 2ZM12 18.25C11.31 18.25 10.75 17.691 10.75 17C10.75 16.31 11.31 15.75 12 15.75C12.69 15.75 13.25 16.31 13.25 17C13.25 17.691 12.69 18.25 12 18.25ZM13 13.875V15H11V12H12C13.104 12 14 11.103 14 10C14 8.896 13.104 8 12 8C10.896 8 10 8.896 10 10H8C8 7.795 9.795 6 12 6C14.205 6 16 7.795 16 10C16 11.861 14.723 13.429 13 13.875Z"></path>
+                                                            </svg>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="content-yTz4x3 firefoxFixScrollFlex-cnI2ix">
+                                                <div class="spacer-1fA9zc vertical-V37hAW flex-1O1GKY directionColumn-35P_nr" style="position: relative;">
+                                                    <div class="messagesWrapper-3lZDfY">
+                                                        <div class="newMessagesBar-mujexs"><button type="button" aria-label="Jump to last unread message" aria-describedby="NewMessagesBarJumpToNewMessages_48"><span id="NewMessagesBarJumpToNewMessages_48">1
+                                                            new message since 12:05 PM</span></button><button type="button">Mark As Read</button>
+                                                        </div>
+                                                        <div class="scrollerWrap-2lJEkd firefoxFixScrollFlex-cnI2ix scrollerWrap-2su1QI scrollerThemed-2oenus themedWithTrack-q8E3vB">
+                                                            <div class="scroller-2FKFPG firefoxFixScrollFlex-cnI2ix systemPad-3UxEGl messages-3amgkR">
+                                                                <div class="default-1VPH9n base-34jWEe">
+                                                                    <h1>Welcome to the beginning of the <strong>#current-channel</strong> channel.</h1>
+                                                                </div>
+                                                                <div class="containerCozyBounded-1rKFAn containerCozy-jafyvG container-1YxwTf">
+                                                                    <div class="messageCozy-2JPAPA message-1PNnaP" aria-disabled="false"> <div class="headerCozy-2N9HOL"> <div class="avatar-17mtNa" aria-hidden="true"> <div class="wrapper-3t9DeA" role="img" aria-hidden="true" style="width: 40px; height: 40px;"> <svg width="49" height="40" viewBox="0 0 49 40" class="mask-1l8v16" aria-hidden="true"> <foreignObject x="0" y="0" width="40" height="40" mask="url(#svg-mask-avatar-default)"><img src="https://cdn.discordapp.com/avatars/174868361040232448/a_38502806fb8ad613fa5241030321f1f9.png?size=128" alt=" " class="avatar-VxgULZ" aria-hidden="true"></foreignObject> </svg> </div></div><h2 class="headerCozyMeta-rdohGq"><span class=""><span tabindex="0" class="username-_4ZSMR" role="button" style="color: rgb(46, 204, 113);">Gibbu</span></span><time class="timestampCozy-2hLAPV" datetime="1566007324684">Today at 12:02 PM</time></h2> </div><div class="contentCozy-3XX413 content-3dzVd8"> <div class="isMentionedCozy-3isp7y isMentioned-N-h9aa containerCozy-336-Cz container-206Blv"> <div class="buttonContainer-KtQ8wc"> <div class="buttonContainer-37UsAw"> <div tabindex="0" class="reactionBtn-2na4rd" aria-label="Add Reaction" role="button"></div><div tabindex="0" class="button-3Jq0g9" aria-label="More Options" role="button"></div></div></div><div class="markup-2BOw-j"><span tabindex="0" class="mention wrapperHover-1GktnT wrapper-3WhCwL" role="button">@User</span></div></div><div class="containerCozy-B4noqO container-1e22Ot"></div></div></div>
+                                                                    <div class="messageCozy-2JPAPA message-1PNnaP" aria-disabled="false"> <div class="contentCozy-3XX413 content-3dzVd8"> <div class="containerCozy-336-Cz container-206Blv"> <div class="buttonContainer-KtQ8wc"> <div class="buttonContainer-37UsAw"> <div tabindex="0" class="reactionBtn-2na4rd" aria-label="Add Reaction" role="button"></div><div tabindex="0" class="button-3Jq0g9" aria-label="More Options" role="button"></div></div></div><div class="markup-2BOw-j"><span tabindex="0" aria-label="Text Channels" class="wrapperHover-1GktnT wrapper-3WhCwL" role="button">#lobby</span></div></div><div class="containerCozy-B4noqO container-1e22Ot"></div></div></div>
+                                                                    <div class="messageCozy-2JPAPA message-1PNnaP" aria-disabled="false"> <div class="contentCozy-3XX413 content-3dzVd8"> <div class="containerCozy-336-Cz container-206Blv"> <div class="buttonContainer-KtQ8wc"> <div class="buttonContainer-37UsAw"> <div tabindex="0" class="reactionBtn-2na4rd" aria-label="Add Reaction" role="button"></div><div tabindex="0" class="button-3Jq0g9" aria-label="More Options" role="button"></div></div></div><div class="markup-2BOw-j"><code class="inline">inline codeblock</code></div></div><div class="containerCozy-B4noqO container-1e22Ot"></div></div></div>
+                                                                    <div class="messageCozy-2JPAPA message-1PNnaP" aria-disabled="false"> <div class="contentCozy-3XX413 content-3dzVd8"> <div class="containerCozy-336-Cz container-206Blv"> <div class="buttonContainer-KtQ8wc"> <div class="buttonContainer-37UsAw"> <div tabindex="0" class="reactionBtn-2na4rd" aria-label="Add Reaction" role="button"></div><div tabindex="0" class="button-3Jq0g9" aria-label="More Options" role="button"></div></div></div><div class="markup-2BOw-j"><pre><code class="scrollbarGhost-2F9Zj2 scrollbar-3dvm_9 hljs">multi-line <br>codeblock</code></pre></div></div><div class="containerCozy-B4noqO container-1e22Ot"></div></div></div>
+                                                                    <div class="messageCozy-2JPAPA message-1PNnaP" aria-disabled="false"> <div class="contentCozy-3XX413 content-3dzVd8"> <div class="containerCozy-336-Cz container-206Blv"> <div class="buttonContainer-KtQ8wc"> <div class="buttonContainer-37UsAw"> <div tabindex="0" class="reactionBtn-2na4rd" aria-label="Add Reaction" role="button"></div><div tabindex="0" class="button-3Jq0g9" aria-label="More Options" role="button"></div></div></div><div class="markup-2BOw-j"><pre><code class="scrollbarGhost-2F9Zj2 scrollbar-3dvm_9 hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">syntax</span>(<span class="hljs-params">highlighting</span>) </span>{<br><span class="hljs-keyword">    let </span>foo = example();<br>}</code></pre></div></div><div class="containerCozy-B4noqO container-1e22Ot"></div></div></div>
+                                                                    <div class="messageCozy-2JPAPA message-1PNnaP" aria-disabled="false"> <div class="contentCozy-3XX413 content-3dzVd8"> <div class="containerCozy-336-Cz container-206Blv"> <div class="buttonContainer-KtQ8wc"> <div class="buttonContainer-37UsAw"> <div tabindex="0" class="reactionBtn-2na4rd" aria-label="Add Reaction" role="button"></div><div tabindex="0" class="button-3Jq0g9" aria-label="More Options" role="button"></div></div></div><div class="markup-2BOw-j">edit message<time datetime="2019-08-17T02:02:55.624Z" class="edited-DL9ECl" role="note" aria-label="Today at 12:02 PM">(edited)</time></div></div><div class="containerCozy-B4noqO container-1e22Ot"></div></div></div>
+                                                                    <div class="messageCozy-2JPAPA message-1PNnaP" aria-disabled="false"> <div class="contentCozy-3XX413 content-3dzVd8"> <div class="containerCozy-336-Cz container-206Blv"> <div class="buttonContainer-KtQ8wc"> <div class="buttonContainer-37UsAw"> <div tabindex="0" class="reactionBtn-2na4rd" aria-label="Add Reaction" role="button"></div><div tabindex="0" class="button-3Jq0g9" aria-label="More Options" role="button"></div></div></div><div class="markup-2BOw-j"><a tabindex="0" title="https://www.youtube.com/watch?v=SgxoapBA7YM" class="anchor-3Z-8Bb anchorUnderlineOnHover-2ESHQB" href="https://www.youtube.com/watch?v=SgxoapBA7YM" rel="noreferrer noopener" target="_blank" role="button">https://www.youtube.com/watch?v=SgxoapBA7YM</a></div></div><div class="containerCozy-B4noqO container-1e22Ot"> <div class="embed-IeVjo6 embedWrapper-3AbfJJ" aria-hidden="false" style="max-width: 426px;"> <div tabindex="0" class="embedSuppressButton-1FonMn" aria-label="Remove all embeds" role="button"> <svg name="Close" aria-hidden="false" width="16" height="16" viewBox="0 0 12 12"> <g fill="none" fill-rule="evenodd"> <path d="M0 0h12v12H0"></path> <path class="fill" fill="currentColor" d="M9.5 3.205L8.795 2.5 6 5.295 3.205 2.5l-.705.705L5.295 6 2.5 8.795l.705.705L6 6.705 8.795 9.5l.705-.705L6.705 6"></path> </g> </svg> </div><div class="embedPill-1Zntps" style="background-color: rgb(255, 0, 0);"></div><div class="embedInner-1-fpTo"> <div class="embedContent-3fnYWm"> <div class="embedContentInner-FBnk7v markup-2BOw-j"> <div class=""><a tabindex="0" class="anchor-3Z-8Bb anchorUnderlineOnHover-2ESHQB embedProviderLink-2Pq1Uw embedLink-1G1K1D embedProvider-3k5pfl" href="https://www.youtube.com/" rel="noreferrer noopener" target="_blank">YouTube</a></div><div class="embedAuthor-3l5luH embedMargin-UO5XwE"><a tabindex="0" class="anchor-3Z-8Bb anchorUnderlineOnHover-2ESHQB embedAuthorNameLink-1gVryT embedLink-1G1K1D embedAuthorName-3mnTWj" href="https://www.youtube.com/channel/UCCRL6oZyfXphLEojEsJBILA" rel="noreferrer noopener" target="_blank">For Gamers</a></div><div class="embedMargin-UO5XwE"><a tabindex="0" class="anchor-3Z-8Bb anchorUnderlineOnHover-2ESHQB embedTitleLink-1Zla9e embedLink-1G1K1D embedTitle-3OXDkz" href="https://www.youtube.com/watch?v=SgxoapBA7YM" rel="noreferrer noopener" target="_blank">RTX 2080TI vs 2080 vs 2070 vs 2060 | Tested 13 Games |</a></div></div></div><div class="embedVideo-3nf0O9 embedMarginLarge-YZDCEs" style="width: 400px; height: 225px;"> <div class="imageWrapper-2p5ogY clickable-3Ya1ho embedVideoImageComponent-34z3di" style="width: 400px; height: 225px;"><img class="embedVideoImageComponentInner-2Ujh_1" alt="" src="https://images-ext-2.discordapp.net/external/IFNUm4LZFjcobiR6_xCmMUDCwcmmw7ugFstvJwuKz-U/https/i.ytimg.com/vi/SgxoapBA7YM/maxresdefault.jpg" style="width: 400px; height: 225px;"></div><div class="embedVideoActions-O6vR7W"> <div class="centerContent-1dpMl0"> <div class="wrapper-129saQ"> <div tabindex="0" class="iconWrapperActive-12kkfE iconWrapper-21idzA" role="button"> <svg name="Play" class="iconPlay-2kgvwV icon-3ZFEtL" aria-hidden="false" width="16" height="16" viewBox="0 0 24 24"> <polygon fill="currentColor" points="0 0 0 14 11 7" transform="translate(7 5)"></polygon> </svg> </div><a href="https://www.youtube.com/watch?v=SgxoapBA7YM" target="_blank" rel="noreferrer noopener" class="iconWrapperActive-12kkfE iconWrapper-21idzA"> <svg name="OpenExternal" class="iconExternalMargins-2v2mzg icon-3ZFEtL" aria-hidden="false" width="16" height="16" viewBox="0 0 24 24"> <path fill="currentColor" transform="translate(3.000000, 4.000000)" d="M16 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h4v-2H2V4h14v10h-4v2h4c1.1 0 2-.9 2-2V2a2 2 0 0 0-2-2zM9 6l-4 4h3v6h2v-6h3L9 6z"></path> </svg> </a> </div></div></div></div></div></div></div></div></div>
+                                                                    <hr aria-hidden="true" class="dividerEnabled-2TTlcf divider-32i8lo">
+                                                                </div>
+                                                                <div class="isLocalBot-38G0P0 containerCozyBounded-1rKFAn containerCozy-jafyvG container-1YxwTf">
+                                                                    <div class="messageCozy-2JPAPA message-1PNnaP" aria-disabled="false">
+                                                                        <div class="headerCozy-2N9HOL">
+                                                                            <div class="avatar-17mtNa" aria-hidden="true">
+                                                                                <div class="wrapper-3t9DeA" role="img" aria-hidden="true" style="width: 40px; height: 40px;">
+                                                                                    <svg width="49" height="40" viewBox="0 0 49 40" class="mask-1l8v16" aria-hidden="true">
+                                                                                        <foreignObject x="0" y="0" width="40" height="40" mask="url(#svg-mask-avatar-default)"><img src="https://images.discordapp.net/avatars/509770503863402499/3ba3b5bf806373f76826d1ad40d09810.png?size=512" alt=" " class="avatar-VxgULZ"
+                                                                                            aria-hidden="true"></foreignObject>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                            <h2 class="headerCozyMeta-rdohGq"><span class=""><span tabindex="0" class="username-_4ZSMR" role="button">Clyde</span><span class="botTagRegular-2HEhHi botTag-2WPJ74 botTagCozy-1875JY botTag-2BhDSU">BOT</span></span><time
+                                                                                class="timestampCozy-2hLAPV" datetime="1566007423155">Today at 12:03 PM</time></h2>
+                                                                        </div>
+                                                                        <div class="contentCozy-3XX413 content-3dzVd8">
+                                                                            <div class="containerCozy-336-Cz container-206Blv">
+                                                                                <div class="buttonContainer-KtQ8wc">
+                                                                                    <div class="buttonContainer-37UsAw"></div>
+                                                                                </div>
+                                                                                <div class="markup-2BOw-j">Boop. Clyde local bot message.</div>
+                                                                            </div>
+                                                                            <div class="containerCozy-B4noqO container-1e22Ot"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="localBotMessage-1cGMdw">Only you can see this — <a tabindex="0" class="anchor-3Z-8Bb anchorUnderlineOnHover-2ESHQB" role="button">delete this message</a>.</div>
+                                                                </div>
+                                                                <div class="divider-3gKybi dividerRed-MKoLlr divider-3zi9LO"><span class="dividerContent-2L12VI">New Messages</span></div>
+                                                                <div class="containerCozyBounded-1rKFAn containerCozy-jafyvG container-1YxwTf">
+                                                                    <div class="messageCozy-2JPAPA message-1PNnaP" aria-disabled="false">
+                                                                        <div class="headerCozy-2N9HOL">
+                                                                            <div class="avatar-17mtNa" aria-hidden="true">
+                                                                                <div class="wrapper-3t9DeA" role="img" aria-hidden="true" style="width: 40px; height: 40px;">
+                                                                                    <svg width="49" height="40" viewBox="0 0 49 40" class="mask-1l8v16" aria-hidden="true">
+                                                                                        <foreignObject x="0" y="0" width="40" height="40" mask="url(#svg-mask-avatar-default)"><img src="https://cdn.discordapp.com/avatars/174868361040232448/a_38502806fb8ad613fa5241030321f1f9.png?size=128"
+                                                                                            alt=" " class="avatar-VxgULZ" aria-hidden="true"></foreignObject>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                            <h2 class="headerCozyMeta-rdohGq"><span class=""><span tabindex="0" class="username-_4ZSMR" role="button" style="color: rgb(46, 204, 113);">Gibbu</span></span><time class="timestampCozy-2hLAPV"
+                                                                                datetime="1566007534423">Today at 12:05 PM</time></h2>
+                                                                        </div>
+                                                                        <div class="contentCozy-3XX413 content-3dzVd8">
+                                                                            <div class="containerCozy-336-Cz container-206Blv">
+                                                                                <div class="buttonContainer-KtQ8wc">
+                                                                                    <div class="buttonContainer-37UsAw">
+                                                                                        <div tabindex="0" class="reactionBtn-2na4rd" aria-label="Add Reaction" role="button"></div>
+                                                                                        <div tabindex="0" class="button-3Jq0g9" aria-label="More Options" role="button"></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="markup-2BOw-j">New Message</div>
+                                                                            </div>
+                                                                            <div class="containerCozy-B4noqO container-1e22Ot"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr aria-hidden="true" class="dividerEnabled-2TTlcf divider-32i8lo">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <form>
+                                                        <div class="flex-1xMQg5 flex-1O1GKY vertical-V37hAW flex-1O1GKY directionColumn-35P_nr justifyStart-2NDFzi alignStretch-DpGPf3 noWrap-3jynv6" style="flex: 1 1 auto;">
+                                                            <div class="channelTextArea-1LDbYG channelTextArea-rNsIhG">
+                                                                <div class="inner-zqa7da flex-1O1GKY innerNoAutocomplete-1WpcVO">
+                                                                    <div class="flex-1xMQg5 flex-1O1GKY horizontal-1ae9ci horizontal-2EEEnY flex-1O1GKY directionRow-3v3tfG justifyStart-2NDFzi alignStretch-DpGPf3 noWrap-3jynv6" style="flex: 1 1 auto;">
+                                                                        <button
+                                                                            tabindex="5" aria-label="Upload a File" type="button" class="attachButton-1UjEWA button-38aScr lookBlank-3eh9lL colorBrand-3pXr91 grow-q77ONN">
+                                                                            <div class="contents-18-Yxp attachButtonInner-1iyZ9F">
+                                                                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                                                                    <path fill="currentColor" class="attachButtonPlus-rUdX-B" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"></path>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </button>
+                                                                        <div class="attachButtonDivider-3Glu60"></div>
+                                                                    </div>
+                                                                    <div class="uploadInput-2lNPSo"><input class="file-input" type="file" tabindex="-1" multiple="" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; opacity: 0; cursor: pointer;"></div>
+                                                                    <textarea
+                                                                        rows="1" placeholder="Message #current-channel" tabindex="1" autocorrect="off" class="textArea-2Spzkt textArea-2Spzkt scrollbarGhostHairline-1mSOM1 scrollbar-3dvm_9" style="height: auto;"></textarea>
+                                                                    <div class="buttons-205you">
+                                                                        <button aria-label="Send a gift" tabindex="2" type="button" class="buttonWrapper-1ZmCpA button-38aScr lookBlank-3eh9lL colorBrand-3pXr91 grow-q77ONN">
+                                                                            <div class="contents-18-Yxp button-3AYNKb button-2vd_v_">
+                                                                                <svg name="Gift" class="icon-3D60ES" aria-hidden="false" width="16" height="16" viewBox="0 0 16 16">
+                                                                                    <path fill="currentColor" fill-rule="evenodd" d="M13.9499381,4.97031408 L15,4.97031408 C15.5522847,4.97031408 16,5.42245961 16,5.98020939 L16,8 L0,8 L0,5.98020939 C-6.76353751e-17,5.42245961 0.44771525,4.97031408 1,4.97031408 L1.97920984,4.97031408 C1.01782154,3.76290607 1.11036555,1.99225385 2.23546762,0.895004171 C3.42730882,-0.267332482 5.32651446,-0.233853688 6.47746213,0.969781151 C7.07300942,1.59259093 7.63216429,2.52072721 7.97475156,3.47225991 C8.3157709,2.50516262 8.88309781,1.55764854 9.48796509,0.925092131 C10.6389128,-0.278542708 12.5381184,-0.312021502 13.7299596,0.85031515 C14.8690241,1.96118164 14.9497436,3.76226816 13.9499381,4.97031408 Z M10.635938,5 C10.734461,4.96362465 10.837387,4.92192897 10.9436159,4.87518066 C11.6535979,4.56273792 12.4171451,4.06075227 12.7190202,3.74012812 C13.103105,3.33218843 13.0920422,2.68213425 12.6943108,2.28819147 C12.2965794,1.8942487 11.6627922,1.90559543 11.2787075,2.31353512 C10.9768324,2.63415927 10.514354,3.43434591 10.2346934,4.17301099 C10.1162728,4.48579438 10.0363609,4.77004854 10,5 L10.635938,5 Z M5.25139448,5 L6,5 C5.96063336,4.77507371 5.88337351,4.50341724 5.77235412,4.20642989 C5.49198082,3.45640483 5.02832378,2.64391205 4.72567933,2.318357 C4.34061573,1.90414358 3.7052133,1.89262234 3.30646827,2.29262359 C2.90772324,2.69262485 2.89663225,3.35267626 3.28169585,3.76688968 C3.58434031,4.09244473 4.34983347,4.60215046 5.06162485,4.91939828 C5.12617993,4.94817069 5.18951835,4.97505811 5.25139448,5 Z M1,10 L7,10 L7,16 L2,16 C1.44771525,16 1,15.5522847 1,15 L1,10 Z M9,10 L15,10 L15,15 C15,15.5522847 14.5522847,16 14,16 L9,16 L9,10 Z"></path>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </button>
+                                                                        <div class="buttonContainer-21MN7J">
+                                                                            <button aria-label="Open GIF picker" tabindex="3" type="button" class="buttonWrapper-1ZmCpA button-38aScr lookBlank-3eh9lL colorBrand-3pXr91 grow-q77ONN">
+                                                                                <div class="contents-18-Yxp button-3AYNKb button-2vd_v_">
+                                                                                    <svg name="InvertedGIFLabel" class="icon-3D60ES gifPickerIcon-132le6" aria-hidden="false" width="24" height="18"
+                                                                                        viewBox="0 0 24 18">
+                                                                                        <path fill="currentColor" d="M3,0 L21,0 C22.6568542,-3.04359188e-16 24,1.34314575 24,3 L24,15 C24,16.6568542 22.6568542,18 21,18 L3,18 C1.34314575,18 2.02906125e-16,16.6568542 0,15 L0,3 C-2.02906125e-16,1.34314575 1.34314575,-5.83819232e-16 3,-8.8817842e-16 Z M11,5 L11,13 L13,13 L13,5 L11,5 Z M8,5 L4,5 C3.28,5 3,5.33333333 3,6 L3,12 C3,12.6666667 3.28,13 4,13 L8,13 C8.72,13 9,12.6666667 9,12 L9,8 L6,8 L6,10 L7,10 L7,11 L5,11 L5,7 L9,7 L9,6 C9,5.33333333 8.72,5 8,5 Z M21,7 L21,5 L15,5 L15,13 L17,13 L17,10 L20,10 L20,8 L17,8 L17,7 L21,7 Z"></path>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </button>
+                                                                        </div>
+                                                                        <button tabindex="4" aria-label="Select emoji" type="button" class="emojiButtonNormal-TdumYh emojiButton-3uL3Aw button-2vd_v_ button-38aScr lookBlank-3eh9lL colorBrand-3pXr91 grow-q77ONN">
+                                                                            <div class="contents-18-Yxp">
+                                                                                <div class="spriteNormal-1wvG5n sprite-2iCowe" style="background-position: -132px -66px; background-size: 242px 110px;"></div>
+                                                                            </div>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="membersWrap-2h-GB4">
+                                                    <div class="scrollerWrap-2lJEkd firefoxFixScrollFlex-cnI2ix containStyles-2a-Dzo scrollerThemed-2oenus themeGhostHairline-DBD-2d scrollerFade-1Ijw5y">
+                                                        <div class="scroller-2FKFPG firefoxFixScrollFlex-cnI2ix systemPad-3UxEGl members-1998pB">
+                                                            <div style="width: 100%; height: 0px; visibility: hidden;"></div>
+                                                            <div class="membersGroup-v9BXpm">Online—2</div>
+                                                            <div class="memberOnline-1CIh-0 member-3W1lQa popout-open">
+                                                                <div class="avatarWrapper-3B0ndJ wrapper-3t9DeA" role="img" aria-label="Gibbu, Online" aria-hidden="false" style="width: 32px; height: 32px;">
+                                                                    <svg width="40" height="32" viewBox="0 0 40 32"
+                                                                        class="mask-1l8v16" aria-hidden="true">
+                                                                        <mask id="6c024aea-5c55-438f-bc42-1e89eb7fe30c" width="32" height="32">
+                                                                            <circle cx="16" cy="16" r="16" fill="white"></circle>
+                                                                            <rect color="black" x="19" y="19" width="16" height="16" rx="8" ry="8"></rect>
+                                                                        </mask>
+                                                                        <foreignObject x="0" y="0" width="32" height="32" mask="url(#6c024aea-5c55-438f-bc42-1e89eb7fe30c)"><img src="https://cdn.discordapp.com/avatars/174868361040232448/a_38502806fb8ad613fa5241030321f1f9.png?size=128"
+                                                                            alt=" " class="avatar-VxgULZ" aria-hidden="true"></foreignObject>
+                                                                        <svg x="14.5" y="17" width="25" height="15" viewBox="0 0 25 15" class="cursorDefault-dsQJ1n">
+                                                                            <mask id="bd403a81-86f5-41a1-92bd-804bd89b856a">
+                                                                                <rect x="7.5" y="5" width="10" height="10" rx="5" ry="5" fill="white"></rect>
+                                                                                <rect x="12.5" y="10" width="0" height="0" rx="0" ry="0" fill="black"></rect>
+                                                                                <polygon points="-2.16506,-2.5 2.16506,0 -2.16506,2.5" fill="black" transform="scale(0) translate(13.125 10)" style="transform-origin: 13.125px 10px;"></polygon>
+                                                                                <circle fill="black" cx="12.5" cy="10" r="0"></circle>
+                                                                            </mask>
+                                                                            <rect fill="rgba(67, 181, 129, 1)" width="25" height="15" mask="url(#bd403a81-86f5-41a1-92bd-804bd89b856a)"></rect>
+                                                                        </svg>
+                                                                        <rect x="22" y="22" width="10" height="10" fill="transparent" aria-hidden="true" class="pointerEvents-2zdfdO"></rect>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="memberInner-2CPc3V">
+                                                                    <div class="memberContent-1MK6T5">
+                                                                        <div class="nameTag-3p0yK- nameTag-m8r81H" style="color: rgb(46, 204, 113);"><span class="username-2b1r56 usernameOnline-3jr_0Y username-1cB_5E">Gibbu</span></div>
+                                                                    </div>
+                                                                    <div class="activity-1IYsbk">
+                                                                        <div class="activityText-sLG0UL">Playing <strong>Atom Editor</strong></div>
+                                                                        <svg name="RichActivity" class="activityIcon-S3CciC" aria-hidden="false" width="16" height="16" viewBox="0 0 16 16">
+                                                                            <path class="activityIconForeground-qYIPPg" fill="currentColor" d="M6,7 L2,7 L2,6 L6,6 L6,7 Z M8,5 L2,5 L2,4 L8,4 L8,5 Z M8,3 L2,3 L2,2 L8,2 L8,3 Z M8.88888889,0 L1.11111111,0 C0.494444444,0 0,0.494444444 0,1.11111111 L0,8.88888889 C0,9.50253861 0.497461389,10 1.11111111,10 L8.88888889,10 C9.50253861,10 10,9.50253861 10,8.88888889 L10,1.11111111 C10,0.494444444 9.5,0 8.88888889,0 Z"
+                                                                                transform="translate(3 3)"></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="memberOnline-1CIh-0 member-3W1lQa">
+                                                                <div class="avatarWrapper-3B0ndJ wrapper-3t9DeA" role="img" aria-label="User, Online" aria-hidden="false" style="width: 32px; height: 32px;">
+                                                                    <svg width="40" height="32" viewBox="0 0 40 32"
+                                                                        class="mask-1l8v16" aria-hidden="true">
+                                                                        <mask id="b6428aba-e845-477f-a5d3-46864ba7229f" width="32" height="32">
+                                                                            <circle cx="16" cy="16" r="16" fill="white"></circle>
+                                                                            <rect color="black" x="19" y="19" width="16" height="16" rx="8" ry="8"></rect>
+                                                                        </mask>
+                                                                        <foreignObject x="0" y="0" width="32" height="32" mask="url(#b6428aba-e845-477f-a5d3-46864ba7229f)"><img src="https://support.discordapp.com/hc/user_images/l12c7vKVRCd-XLIdDkLUDg.png" alt=" " class="avatar-VxgULZ"
+                                                                            aria-hidden="true"></foreignObject>
+                                                                        <svg x="14.5" y="17" width="25" height="15" viewBox="0 0 25 15" class="cursorDefault-dsQJ1n">
+                                                                            <mask id="3ffc67fe-e892-4df3-84c9-16f845a84111">
+                                                                                <rect x="7.5" y="5" width="10" height="10" rx="5" ry="5" fill="white"></rect>
+                                                                                <rect x="12.5" y="10" width="0" height="0" rx="0" ry="0" fill="black"></rect>
+                                                                                <polygon points="-2.16506,-2.5 2.16506,0 -2.16506,2.5" fill="black" transform="scale(0) translate(13.125 10)" style="transform-origin: 13.125px 10px;"></polygon>
+                                                                                <circle fill="black" cx="12.5" cy="10" r="0"></circle>
+                                                                            </mask>
+                                                                            <rect fill="rgba(67, 181, 129, 1)" width="25" height="15" mask="url(#3ffc67fe-e892-4df3-84c9-16f845a84111)"></rect>
+                                                                        </svg>
+                                                                        <rect x="22" y="22" width="10" height="10" fill="transparent" aria-hidden="true" class="pointerEvents-2zdfdO"></rect>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="memberInner-2CPc3V">
+                                                                    <div class="memberContent-1MK6T5">
+                                                                        <div class="nameTag-3p0yK- nameTag-m8r81H" style="color: rgb(46, 204, 113);"><span class="username-2b1r56 usernameOnline-3jr_0Y username-1cB_5E">User</span></div>
+                                                                        <svg aria-label="Server Owner"
+                                                                            name="Crown" class="ownerIcon-uZ6mE7 icon-1mmpLU" aria-hidden="false" width="24" height="24" viewBox="0 0 16 16">
+                                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6572 5.42868C13.8879 5.29002 14.1806 5.30402 14.3973 5.46468C14.6133 5.62602 14.7119 5.90068 14.6473 6.16202L13.3139 11.4954C13.2393 11.7927 12.9726 12.0007 12.6666 12.0007H3.33325C3.02725 12.0007 2.76058 11.792 2.68592 11.4954L1.35258 6.16202C1.28792 5.90068 1.38658 5.62602 1.60258 5.46468C1.81992 5.30468 2.11192 5.29068 2.34325 5.42868L5.13192 7.10202L7.44592 3.63068C7.46173 3.60697 7.48377 3.5913 7.50588 3.57559C7.5192 3.56612 7.53255 3.55663 7.54458 3.54535L6.90258 2.90268C6.77325 2.77335 6.77325 2.56068 6.90258 2.43135L7.76458 1.56935C7.89392 1.44002 8.10658 1.44002 8.23592 1.56935L9.09792 2.43135C9.22725 2.56068 9.22725 2.77335 9.09792 2.90268L8.45592 3.54535C8.46794 3.55686 8.48154 3.56651 8.49516 3.57618C8.51703 3.5917 8.53897 3.60727 8.55458 3.63068L10.8686 7.10202L13.6572 5.42868ZM2.66667 12.6673H13.3333V14.0007H2.66667V12.6673Z"
+                                                                                fill="currentColor"></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="membersGroup-v9BXpm">Offline—1</div>
+                                                            <div class="memberOffline-2lN7gt member-3W1lQa">
+                                                                <div class="avatarWrapper-3B0ndJ avatarOffline-3GF27z wrapper-3t9DeA" role="img" aria-label="Gibbu_testing" aria-hidden="false" style="width: 32px; height: 32px;">
+                                                                    <svg width="40" height="32"
+                                                                        viewBox="0 0 40 32" class="mask-1l8v16" aria-hidden="true">
+                                                                        <foreignObject x="0" y="0" width="32" height="32" mask="url(#svg-mask-avatar-default)"><img src="https://cdn.discordapp.com/avatars/369347637834547201/fb44becb6932354f0698dd73baeec1df.png?size=128"
+                                                                            alt=" " class="avatar-VxgULZ" aria-hidden="true"></foreignObject>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="memberInner-2CPc3V">
+                                                                    <div class="memberContent-1MK6T5">
+                                                                        <div class="nameTag-3p0yK- darken-1wMGLZ nameTag-m8r81H" style="color: rgb(155, 89, 182);"><span class="username-2b1r56 usernameOffline-3VSVLk username-1cB_5E">Other Username</span></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div style="width: 100%; height: 0px; visibility: hidden;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uploadArea-3QgLtW">
+                        <div class="uploadDropModal-2kTwbc">
+                            <div class="bgScale-1otPtc"></div>
+                            <div class="inner-3nWsbo">
+                                <div class="icons-1w691d">
+                                    <div class="wrapOne-14G98n">
+                                        <div class="icon-kyxXVr one-2crnLX"></div>
+                                    </div>
+                                    <div class="wrapThree-1CNQ42">
+                                        <div class="icon-kyxXVr three-27ScFD"></div>
+                                    </div>
+                                    <div class="wrapTwo-mQGI3R">
+                                        <div class="icon-kyxXVr two-3BBQI9"></div>
+                                    </div>
+                                </div>
+                                <div class="title-2Vtl4y">Drag &amp; Drop</div>
+                                <div class="instructions-2Du9gG">
+                                    <pre>You can add comments before uploading.
+Hold shift to upload directly.</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pictureInPicture-3VocJq theme-dark"></div>
+                    <div class="theme-dark container-wrYOxa"></div>
+                </div>
+            </div>
+            <div data-no-focus-lock="true">
+                <div class="theme-dark popouts-2bnG9Z">
+                    <div role="dialog" class="noArrow-2foL9g noShadow-3pu20z popout-2iWAc- popoutLeft-3aViER arrowAlignmentTop-1yftWI theme-undefined" style="z-index: 1001; visibility: visible; right: 210px; top: 107px;">
+                        <div class="userPopout-3XzG_A">
+                            <div class="headerPlaying-j0WQBV header-2BwW8b size16-14cGz5">
+                                <div class="flex-1xMQg5 flex-1O1GKY vertical-V37hAW flex-1O1GKY directionColumn-35P_nr justifyCenter-3D2jYp alignCenter-1dQNNs noWrap-3jynv6 headerTop-3C2Zn0" style="flex: 1 1 auto;">
+                                    <div tabindex="0" class="avatarWrapperNormal-3wFMbf avatarWrapper-3H_478" role="button">
+                                        <div class="wrapper-3t9DeA" role="img" aria-label="Gibbu, Online" aria-hidden="false" style="width: 80px; height: 80px;">
+                                            <svg width="92" height="80" viewBox="0 0 92 80" class="mask-1l8v16" aria-hidden="true">
+                                                <foreignObject x="0" y="0" width="80" height="80" mask="url(#svg-mask-avatar-status-round-80)"><img src="https://cdn.discordapp.com/avatars/174868361040232448/a_38502806fb8ad613fa5241030321f1f9.gif?size=128"
+                                                    alt=" " class="avatar-VxgULZ" aria-hidden="true"></foreignObject>
+                                                <rect width="16" height="16" x="60" y="60" fill="#ffffff" mask="url(#svg-mask-status-online)" class="pointerEvents-2zdfdO"></rect>
+                                            </svg>
+                                        </div>
+                                        <svg width="80" height="80" class="avatarHint-1qgaV3" viewBox="0 0 80 80">
+                                            <foreignObject x="0" y="0" width="80" height="80" mask="url(#svg-mask-avatar-status-round-80)">
+                                                <div class="avatarHintInner-Dco91E size10-39i14u height12-2Ltw-k weightBold-2yjlgw">View Profile</div>
+                                            </foreignObject>
+                                        </svg>
+                                    </div>
+                                    <div class="headerText-2sdzFM userSelectText-1o1dQ7">
+                                        <div class="flex-1xMQg5 flex-1O1GKY horizontal-1ae9ci horizontal-2EEEnY flex-1O1GKY directionRow-3v3tfG justifyStart-2NDFzi alignCenter-1dQNNs noWrap-3jynv6" style="flex: 1 1 auto;">
+                                            <div class="headerTagNoNickname-ENx6no headerTag-2pZJzA size14-3iUx6q weightNormal-WI4TcG size16-14cGz5 nameTag-m8r81H"><span class="username-2b1r56 headerTagUsernameNoNickname-2_H881 weightSemiBold-NJexzi">Gibbu</span><span>#1211</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="activityUserPopout-2yItg2 activity-11LB_k">
+                                    <div class="headerTextNormal-2mGWX3 headerText-1HLrL7 marginBottom8-AtZOdT small-29zrCQ size12-3R0845 height16-2Lv3qA weightBold-2yjlgw">Playing a game</div>
+                                    <div class="bodyNormal-2D39hT body-ZAhrcj flex-1O1GKY alignStart-H-X2h-">
+                                        <div class="assets-VMAukC"><img alt="Editing a HTML file" src="https://cdn.discordapp.com/app-assets/380510159094546443/380685187257729027.png" class="assetsLargeImageUserPopout-3Pp8BK assetsLargeImage-eYwpTX noUserDrag-5Mb43F assetsLargeMaskUserPopout-12EBBc"
+                                            aria-label="Editing a HTML file"><img alt="Editing preview.html" src="https://cdn.discordapp.com/app-assets/380510159094546443/386340731670757377.png" class="assetsSmallImageUserPopout-2yc71g assetsSmallImage-3_3Bzj noUserDrag-5Mb43F"
+                                            aria-label="Editing preview.html"></div>
+                                        <div class="contentImagesUserPopout-1vLdRA content-3JfFJh" style="flex: 1 1 auto;">
+                                            <div class="nameNormal-2lqVQK ellipsis-1XUmPN textRow-19NEd_ weightSemiBold-NJexzi" title="Atom Editor"><span class="activityName-1IaRLn textHover-3f_j3D">Atom Editor</span></div>
+                                            <div title="Working on a project" class="details-38sfDr ellipsis-1XUmPN textRow-19NEd_">Working on a project</div>
+                                            <div class="state-Tt0LO3 ellipsis-1XUmPN textRow-19NEd_"><span title="Editing preview.html">Editing preview.html</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="body-3iLsc4">
+                                <div class="bodyTitle-Y0qMQz marginBottom8-AtZOdT size12-3R0845 weightBold-2yjlgw">Roles</div>
+                                <ul class="root-3-B5F3 flex-1O1GKY wrap-ZIn9Iy rolesList-22qj2L endBodySection-Rf4s-7 marginBottom20-32qID7">
+                                    <li class="role-2irmRk flex-1O1GKY alignCenter-1dQNNs" style="border-color: rgba(46, 204, 113, 0.6);">
+                                        <button class="roleCircleButton-377y0l roleCircle-3xAZ1j flex-1O1GKY alignCenter-1dQNNs justifyCenter-3D2jYp" style="background-color: rgb(46, 204, 113);">
+                                            <svg
+                                                name="Close" class="roleRemoveIcon-2-TeGW" aria-hidden="false" width="12" height="12" viewBox="0 0 12 12">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <path d="M0 0h12v12H0"></path>
+                                                    <path class="fill" fill="#ffffff" d="M9.5 3.205L8.795 2.5 6 5.295 3.205 2.5l-.705.705L5.295 6 2.5 8.795l.705.705L6 6.705 8.795 9.5l.705-.705L6.705 6"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <div class="roleName-32vpEy">Admin</div>
+                                    </li>
+                                    <li class="role-2irmRk flex-1O1GKY alignCenter-1dQNNs" style="border-color: rgba(2, 1, 1, 0.6);">
+                                        <button class="roleCircleButton-377y0l roleCircle-3xAZ1j flex-1O1GKY alignCenter-1dQNNs justifyCenter-3D2jYp" style="background-color: rgb(2, 1, 1);">
+                                            <svg
+                                                name="Close" class="roleRemoveIcon-2-TeGW" aria-hidden="false" width="12" height="12" viewBox="0 0 12 12">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <path d="M0 0h12v12H0"></path>
+                                                    <path class="fill" fill="#ffffff" d="M9.5 3.205L8.795 2.5 6 5.295 3.205 2.5l-.705.705L5.295 6 2.5 8.795l.705.705L6 6.705 8.795 9.5l.705-.705L6.705 6"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <div class="roleName-32vpEy">Muted</div>
+                                    </li>
+                                    <button aria-controls="popout_47" aria-expanded="false" class="addButton-pcyyf6 actionButton-VzECiy role-2irmRk flex-1O1GKY alignCenter-1dQNNs justifyCenter-3D2jYp">
+                                        <svg class="addButtonIcon-1NMJ8u" width="7"
+                                            height="7" viewBox="0 5 7 7">
+                                            <g fill="currentColor">
+                                                <path d="M3 5h1v7H3z"></path>
+                                                <path d="M0 8h7v1H0z"></path>
+                                            </g>
+                                        </svg>
+                                    </button>
+                                </ul>
+                                <div class="bodyTitle-Y0qMQz marginBottom8-AtZOdT size12-3R0845 weightBold-2yjlgw">Note</div>
+                                <div class="note-3kmerW note-3HfJZ5"><textarea placeholder="Click to add a note" maxlength="256" autocorrect="off" class="scrollbarGhostHairline-1mSOM1 scrollbar-3dvm_9" style="height: 36px;"></textarea></div>
+                            </div>
+                            <div class="footer-1fjuF6">
+                                <input class="quickMessage-2XpSaN quickMessage-1yeL4E" placeholder="Message @Gibbu">
+                                <div class="protip-YaFfgO marginTop8-1DLZ1n inline-136HKr">
+                                    <div class="pro-1T8RK7 small-29zrCQ size12-3R0845 height16-2Lv3qA statusGreen-pvYWjA weightBold-2yjlgw">Protip:</div>
+                                    <div class="tip-2ab612 primary-jw0I4K">Right click user for more actions</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="theme-dark"></div>
+                <div class="layerContainer-yqaFcK theme-dark"></div>
+            </div>
+        </div>
+        <textarea style="letter-spacing:normal;line-height:14px;padding-top:4px;padding-bottom:4px;font-family:Whitney, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-weight:400;font-size:12px;text-transform:none;width:234px;padding-left:4px;padding-right:4px;border-width:0px;box-sizing:border-box;
+            visibility:hidden;
+            overflow:hidden;
+            position:absolute;
+            z-index:-1000;
+            top:0;
+            right:0;
+            "></textarea>
+    </body>
+</html>
