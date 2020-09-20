@@ -1,18 +1,27 @@
-# ThemePreview for Discord themes
+## Theme preview for Discord themes
+#### Usage:  
+Go to [https://gibbu.github.io/ThemePreview/?file=(DIRECT LINK)](https://gibbu.github.io/ThemePreview/?file)  
+Paste your direct web hosted css url in place if (DIRECT LINK)
 
-Basic usage:  
-Go to [https://gibbu.github.io/ThemePreview/?file=](https://gibbu.github.io/ThemePreview/?file=) then add your direct web hosted css url.
+- - -
 
-URL parameters:
+#### Direct link example:  
+This will work: `https://discordstyles.github.io/Slate/Slate.theme.css`  
+This will not: `https://github.com/DiscordStyles/Slate`
 
-| Parameter | Description | Options |
+- - -
+
+#### URL Paramters:  
+| Parameter | Description | type |  
 | :---- | :---- | :---- |
-| file | Imports web hosted css into previewer | url |
-| lightTheme | Auto sets Discord light theme | true |
+| file | Imports web hosted URL css into previewer | string |
+| lightTheme | Sets previewer to Light Theme | boolean |
 
-If you do not wish to use light theme or display the popout, simply leave the parameter out of the url.
+`lightTheme` parameter is not required in the url if not true.
 
-End result:
+- - -
+
+#### End result:
 ```
-https://gibbu.github.io/ThemePreview/?file=https://gibbu.github.io/BetterDiscord-Themes/TrueLight/TrueLight.theme.css&lightTheme=true
+https://gibbu.github.io/ThemePreview/?file=https://discordstyles.github.io/Slate/Slate.theme.css&lightTheme=true
 ```
