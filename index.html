@@ -28,6 +28,8 @@
 		window.addEventListener('message', event => {
 			const data = JSON.parse(event.data);
 
+			console.log(event.data);
+
 			if (data.action === 'addFont') {
 				if (!document.querySelector(`#font-${data.index}`)) {
 					const tag = document.createElement('style');
