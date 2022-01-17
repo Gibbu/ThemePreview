@@ -25,10 +25,8 @@
 			console.error('Issues with parsing URL Parameters', err);
 		}
 
-		window.addEventListener('message', ({data}) => {
-			alert('wow');
-
-			const data = JSON.parse(data);
+		window.addEventListener('message', event => {
+			const data = JSON.parse(event.data);
 
 			if (data.action === 'addFont') {
 				if (!document.querySelector(`#font-${data.index}`)) {
