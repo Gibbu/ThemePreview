@@ -26,31 +26,30 @@
 		}
 
 		window.addEventListener('message', ({data}) => {
-			const el = data.split('|');
-			if (el[0] === 'addFont') {
-				const data = el[1].split(';');
-				if (!document.querySelector(`#font-${data[1]}`)) {
+			const data = JSON.parse(data);
+
+			if (data.action === 'addFont') {
+				if (!document.querySelector(`#font-${data.index}`)) {
 					const tag = document.createElement('style');
-					tag.setAttribute('id', `font-${data[1]}`);
+					tag.setAttribute('id', `font-${data.index}`);
 					tag.setAttribute('class', 'customfont');
-					tag.innerText = data[0];
+					tag.innerText = data.text;
 	
 					document.querySelector('head').appendChild(tag);
 				} else {
-					document.querySelector(`#font-${data[1]}`).innerHTML = data[0];
+					document.querySelector(`#font-${data.index}`).innerHTML = data.text;
 				}
 			}
 
-			if (el[0] === 'addAddon') {
-				const data = el[1].split(';');
+			if (data.action === 'addAddon') {
 				const tag = document.createElement('style');
 
-				tag.className = data[0];
-				tag.textContent = `@import url('${data[1]}');`;
+				tag.className = data.class;
+				tag.textContent = `@import url('${data.text}');`;
 				document.querySelector('head').appendChild(tag);
 			}
-			if (el[0] === 'removeAddon') {
-				document.querySelectorAll(`.${el[1]}`).forEach(el => el.remove());
+			if (data.action === 'removeAddon') {
+				document.querySelectorAll(`.${data.class}`).forEach(el => el.remove());
 			}
 		})
 	</script>
