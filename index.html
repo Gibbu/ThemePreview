@@ -26,6 +26,8 @@
 		}
 
 		window.addEventListener('message', ({data}) => {
+			alert('wow');
+
 			const data = JSON.parse(data);
 
 			if (data.action === 'addFont') {
