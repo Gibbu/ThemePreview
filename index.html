@@ -28,7 +28,12 @@
 		window.addEventListener('message', event => {
 			const data = JSON.parse(event.data);
 
-			console.log(event.data);
+			if (data.action === 'setProperty') {
+				document.documentElement.style.setProperty(`--${data.variable}`, data.value);
+			}
+			if (data.action === 'removeProperty') {
+				document.documentElement.style.removeProperty(`--${data.variable}`);
+			}
 
 			if (data.action === 'addFont') {
 				if (!document.querySelector(`#font-${data.index}`)) {
