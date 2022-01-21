@@ -10,9 +10,16 @@
 	<link rel="icon" href="https://discord.com/assets/07dca80a102d4149e9736d4b162cff6f.ico"> <!-- section:title -->
 	<title>Theme Preview</title>
 	<link id="import" rel="stylesheet" href="">
+	<style>
+		.HIDDEN {
+			display: none !important;
+		}
+	</style>
 	<script defer>
 		try {
-			let {href} = window.location;
+			let {
+				href
+			} = window.location;
 			let url = new URL(href);
 			let file = url.searchParams.get('file');
 			let lightTheme = url.searchParams.get('lightTheme');
@@ -41,11 +48,14 @@
 					tag.setAttribute('id', `font-${data.index}`);
 					tag.setAttribute('class', 'customfont');
 					tag.innerText = data.text;
-	
+
 					document.querySelector('head').appendChild(tag);
 				} else {
 					document.querySelector(`#font-${data.index}`).innerHTML = data.text;
 				}
+			}
+			if (data.action === 'removeFont') {
+				document.querySelector(`#font-${data.index}`)?.remove();
 			}
 
 			if (data.action === 'addAddon') {
@@ -56,7 +66,12 @@
 				document.querySelector('head').appendChild(tag);
 			}
 			if (data.action === 'removeAddon') {
-				document.querySelectorAll(`.${data.class}`).forEach(el => el.remove());
+				document.querySelectorAll(`.${data.class}`)?.forEach(el => el.remove());
+			}
+
+			if (data.action === 'toggleModal') {
+				document.querySelector('#modal').classList.toggle('HIDDEN');
+				document.querySelector('#popout').classList.toggle('HIDDEN');
 			}
 		})
 	</script>
@@ -1871,7 +1886,7 @@ codeblock</code></pre>
 																							<div class="reactionInner-9eVHJa"
 																								aria-label="😀, 2 reactions, press to react" aria-pressed="true"
 																								role="button" tabindex="0"><img
-																									src="https://discord.com/assets/7c010dc6da25c012643ea22c1f002bb4.svg"
+																									src="/assets/7c010dc6da25c012643ea22c1f002bb4.svg"
 																									alt="😀" draggable="false" class="emoji" data-type="emoji"
 																									data-name="😀">
 																								<div class="reactionCount-1zkLcN" style="min-width: 9px;">
@@ -1886,7 +1901,7 @@ codeblock</code></pre>
 																							<div class="reactionInner-9eVHJa"
 																								aria-label="🤣, 1 reaction, press to react" aria-pressed="false"
 																								role="button" tabindex="0"><img
-																									src="https://discord.com/assets/567230faa19ec889fad5613630597049.svg"
+																									src="/assets/567230faa19ec889fad5613630597049.svg"
 																									alt="🤣" draggable="false" class="emoji" data-type="emoji"
 																									data-name="🤣">
 																								<div class="reactionCount-1zkLcN" style="min-width: 9px;">
@@ -1901,7 +1916,7 @@ codeblock</code></pre>
 																							<div class="reactionInner-9eVHJa"
 																								aria-label="😇, 1 reaction, press to react" aria-pressed="true"
 																								role="button" tabindex="0"><img
-																									src="https://discord.com/assets/e461bb3847973d47822fdc79d66f494d.svg"
+																									src="/assets/e461bb3847973d47822fdc79d66f494d.svg"
 																									alt="😇" draggable="false" class="emoji" data-type="emoji"
 																									data-name="😇">
 																								<div class="reactionCount-1zkLcN" style="min-width: 9px;">
@@ -1953,7 +1968,7 @@ codeblock</code></pre>
 																				class="markup-eYLPri messageContent-2t3eCI">
 																				Small emojis: <span class="emojiContainer-2XKwXX" role="button"
 																					tabindex="0"><img aria-label="😂"
-																						src="https://discord.com/assets/6201503f3aa918470a2190b36d1e196f.svg"
+																						src="/assets/6201503f3aa918470a2190b36d1e196f.svg"
 																						alt="😂" draggable="false" class="emoji" data-type="emoji"
 																						data-name=":joy:"></span> <span class="timestamp-p1Df1m"><time
 																						aria-label="Edited 2 May 2020 23:55"
@@ -1982,7 +1997,7 @@ codeblock</code></pre>
 																				class="markup-eYLPri messageContent-2t3eCI">
 																				<span class="emojiContainer-2XKwXX" role="button" tabindex="0"><img
 																						aria-label="😂"
-																						src="https://discord.com/assets/6201503f3aa918470a2190b36d1e196f.svg"
+																						src="/assets/6201503f3aa918470a2190b36d1e196f.svg"
 																						alt="😂" draggable="false" class="emoji jumboable" data-type="emoji"
 																						data-name=":joy:"></span></div>
 																		</div>
@@ -2924,10 +2939,10 @@ codeblock</code></pre>
 			</div>
 		</div>
 		<div></div>
-		<div class="layerContainer-2v_Sit" id="userpopout">
+		<div class="layerContainer-2v_Sit" id="popout">
 			<div id="popout_83" class="layer-2aCOJ3" style="position: absolute; top: 110px; right: 248px;">
 				<div class="animatorLeft-3yvG13 translate-PeW1wK didRender-2SiRlm">
-					<div aria-label="Gibbu" class="userPopout-2j1gM4" role="dialog" tabindex="-1" aria-modal="true"
+					<div aria-label="Gibbu" class="popout-2j1gM4" role="dialog" tabindex="-1" aria-modal="true"
 						data-user-id="174868361040232448" style="width: 300px;">
 						<div class="headerNormal-3Zn_yu">
 							<div class="banner-1YaD3N popoutBanner-3cqRD9" style="background-color: rgb(54, 231, 169);">
@@ -2956,10 +2971,10 @@ codeblock</code></pre>
 						<div class="headerTop-3GPUSF">
 							<div class="profileBadges-2pItdR container-1gYwHN" aria-label="User badges" role="group">
 								<div class="clickable-1knRMS" aria-label="HypeSquad Brilliance" role="button" tabindex="0"><img alt=" "
-										aria-hidden="true" src="https://discord.com/assets/ec8e92568a7c8f19a052ef42f862ff18.svg"
+										aria-hidden="true" src="/assets/ec8e92568a7c8f19a052ef42f862ff18.svg"
 										class="profileBadge22-3GAYRy profileBadge-12r2Nm desaturate-_Twf3u"></div>
 								<div class="clickable-1knRMS" aria-label="Subscriber since 24 Jan 2019" role="button" tabindex="0"><img
-										alt=" " aria-hidden="true" src="https://discord.com/assets/24d05f3b46a110e538674edbac0db4cd.svg"
+										alt=" " aria-hidden="true" src="/assets/24d05f3b46a110e538674edbac0db4cd.svg"
 										class="profileBadge22-3GAYRy profileBadge-12r2Nm desaturate-_Twf3u"></div>
 							</div>
 							<div class="headerText-1-WmDq">
@@ -3023,6 +3038,288 @@ codeblock</code></pre>
 						<div class="footer-3naVBw">
 							<div class="inputWrapper-1YNMmM"><input class="inputDefault-3FGxgL input-2g-os5 input-2z42oC"
 									placeholder="Message @Gibbu" name="" type="text" maxlength="999"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="layerContainer-2v_Sit HIDDEN" id="modal">
+			<div class="backdrop-2ByYRN withLayer-2VVmpp"
+				style="opacity: 0.85; background: hsl(0, calc(var(--saturation-factor, 1) * 0%), 0%);"></div>
+			<div class="layer-1Ixpg3">
+				<div class="focusLock-2tveLW" role="dialog" aria-label="User Profile Modal" tabindex="-1" aria-modal="true">
+					<div class="root-8LYsGj root-g14mjS small-23Atuv fullscreenOnMobile-ixj0e3"
+						style="opacity: 1; transform: scale(1);">
+						<div class="topSection-13QKHs">
+							<header>
+								<div class="banner-1YaD3N profileBanner-1owKI5" style="background-color: rgb(54, 231, 169);">
+									<div class="pencilContainer-18TrEJ" aria-label="Edit Profile" role="button" tabindex="0"><svg
+											aria-label="Edit Profile" class="pencilIcon-z04-c5" aria-hidden="false" width="24" height="24"
+											viewBox="0 0 24 24">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M19.2929 9.8299L19.9409 9.18278C21.353 7.77064 21.353 5.47197 19.9409 4.05892C18.5287 2.64678 16.2292 2.64678 14.817 4.05892L14.1699 4.70694L19.2929 9.8299ZM12.8962 5.97688L5.18469 13.6906L10.3085 18.813L18.0201 11.0992L12.8962 5.97688ZM4.11851 20.9704L8.75906 19.8112L4.18692 15.239L3.02678 19.8796C2.95028 20.1856 3.04028 20.5105 3.26349 20.7337C3.48669 20.9569 3.8116 21.046 4.11851 20.9704Z"
+												fill="currentColor"></path>
+										</svg></div>
+								</div>
+								<div class="header-S26rhB">
+									<div class="avatar-3QF_VA wrapper-1VLyxH" role="img" aria-label="Gibbu, Online" aria-hidden="false"
+										style="width: 120px; height: 120px;"><svg width="138" height="120" viewBox="0 0 138 120"
+											class="mask-1FEkla svg-2azL_l" aria-hidden="true">
+											<foreignObject x="0" y="0" width="120" height="120" mask="url(#svg-mask-avatar-status-round-120)">
+												<div class="avatarStack-3vfSFa"><img
+														src="https://cdn.discordapp.com/avatars/174868361040232448/a_e4f905cede68867ac14593b0aad459f2.gif?size=128"
+														alt=" " class="avatar-b5OQ1N" aria-hidden="true"></div>
+											</foreignObject>
+											<rect width="24" height="24" x="88" y="88"
+												fill="hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%)"
+												mask="url(#svg-mask-status-online)" class="pointerEvents-9SZWKj"></rect>
+										</svg></div>
+									<div class="headerTop-1PNKck">
+										<div class="badgeList-2aoHPw container-1gYwHN" aria-label="User Badges" role="group">
+											<div class="clickable-1knRMS" aria-label="HypeSquad Brilliance" role="button" tabindex="0"><img
+													alt=" " aria-hidden="true" src="/assets/ec8e92568a7c8f19a052ef42f862ff18.svg"
+													class="profileBadge24-sH1efV profileBadge-12r2Nm desaturate-_Twf3u"></div>
+											<div class="clickable-1knRMS" aria-label="Subscriber since 24 Jan 2019" role="button"
+												tabindex="0"><img alt=" " aria-hidden="true" src="/assets/24d05f3b46a110e538674edbac0db4cd.svg"
+													class="profileBadge24-sH1efV profileBadge-12r2Nm desaturate-_Twf3u"></div>
+										</div>
+										<div class="relationshipButtons-3ByBpj"></div>
+									</div>
+								</div>
+								<div class="nameTagNoCustomStatus-3ocqoK nameTag-2Nlmsy nameTag-H6kSJ0"><span
+										class="username-3JLfHz username-1g6Iq1">Gibbu</span><span class="discriminator-1bqsd3">#1211</span>
+								</div>
+							</header>
+						</div>
+						<div class="body-1Ukv50 noTabBar-2Q-iE_">
+							<div class="infoScroller-1QMpon thin-31rlnD scrollerBase-_bVAAt fade-1R6FHN" dir="ltr"
+								style="overflow: hidden scroll; padding-right: 12px;">
+								<div class="userInfoSection-2u2hir">
+									<h3 class="userInfoSectionHeader-2mYYun base-21yXnu size12-oc4dx4 uppercase-2unHJn">About Me</h3>
+									<div class="userBio-2-tr00 markup-eYLPri clamped-2ZePhX">Feels sad? Watch this: <a
+											class="anchor-1MIwyf anchorUnderlineOnHover-2qPutX"
+											title="https://www.youtube.com/watch?v=oYmqJl4MoNI"
+											href="https://www.youtube.com/watch?v=oYmqJl4MoNI" rel="noreferrer noopener" target="_blank"
+											role="button" tabindex="0">https://www.youtube.com/watch?v=oYmqJl4MoNI</a></div>
+									<h3 class="userInfoSectionHeader-2mYYun base-21yXnu size12-oc4dx4 uppercase-2unHJn">Note</h3>
+									<div class="note-3M15gE"><textarea placeholder="Click to add a note" maxlength="256" autocorrect="off"
+											class="textarea-_59yqs inputDefault-3FGxgL input-2g-os5 scrollbarGhostHairline-2LpzZ9 scrollbar-3vVt8d"
+											style="height: 44px;"></textarea></div>
+								</div>
+								<div class="userInfoSection-2u2hir">
+									<div class="connectedAccounts-1YaT2t">
+										<div class="connectedAccount-1xKpli"><img alt="Battle.net Logo" class="connectedAccountIcon-2vls0t"
+												src="/assets/37f15a06d062bdd0fc252d2b35d0b0bb.svg">
+											<div class="connectedAccountNameInner-t24B11">
+												<div class="connectedAccountName-j0meX4">Gibbu#1978</div><span aria-label="Verified">
+													<div class="flowerStarContainer-1QeD-L connectedAccountVerifiedIcon-3XCxT8"
+														style="width: 16px; height: 16px;"><svg class="flowerStar-2tNFCR" aria-hidden="false"
+															width="16" height="16" viewBox="0 0 16 15.2">
+															<path fill="hsl(217, calc(var(--saturation-factor, 1) * 7.6%), 33.5%)" fill-rule="evenodd"
+																d="m16 7.6c0 .79-1.28 1.38-1.52 2.09s.44 2 0 2.59-1.84.35-2.46.8-.79 1.84-1.54 2.09-1.67-.8-2.47-.8-1.75 1-2.47.8-.92-1.64-1.54-2.09-2-.18-2.46-.8.23-1.84 0-2.59-1.54-1.3-1.54-2.09 1.28-1.38 1.52-2.09-.44-2 0-2.59 1.85-.35 2.48-.8.78-1.84 1.53-2.12 1.67.83 2.47.83 1.75-1 2.47-.8.91 1.64 1.53 2.09 2 .18 2.46.8-.23 1.84 0 2.59 1.54 1.3 1.54 2.09z">
+															</path>
+														</svg>
+														<div class="childContainer-U_a6Yh"><svg aria-hidden="false" width="16" height="16"
+																viewBox="0 0 16 15.2">
+																<path d="M7.4,11.17,4,8.62,5,7.26l2,1.53L10.64,4l1.36,1Z"
+																	fill="hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)"></path>
+															</svg></div>
+													</div>
+												</span>
+											</div>
+										</div>
+										<div class="connectedAccount-1xKpli"><img alt="GitHub Logo" class="connectedAccountIcon-2vls0t"
+												src="/assets/6a853b4c87fce386cbfef4a2efbacb09.svg">
+											<div class="connectedAccountNameInner-t24B11">
+												<div class="connectedAccountName-j0meX4">Gibbu</div><span aria-label="Verified">
+													<div class="flowerStarContainer-1QeD-L connectedAccountVerifiedIcon-3XCxT8"
+														style="width: 16px; height: 16px;"><svg class="flowerStar-2tNFCR" aria-hidden="false"
+															width="16" height="16" viewBox="0 0 16 15.2">
+															<path fill="hsl(217, calc(var(--saturation-factor, 1) * 7.6%), 33.5%)" fill-rule="evenodd"
+																d="m16 7.6c0 .79-1.28 1.38-1.52 2.09s.44 2 0 2.59-1.84.35-2.46.8-.79 1.84-1.54 2.09-1.67-.8-2.47-.8-1.75 1-2.47.8-.92-1.64-1.54-2.09-2-.18-2.46-.8.23-1.84 0-2.59-1.54-1.3-1.54-2.09 1.28-1.38 1.52-2.09-.44-2 0-2.59 1.85-.35 2.48-.8.78-1.84 1.53-2.12 1.67.83 2.47.83 1.75-1 2.47-.8.91 1.64 1.53 2.09 2 .18 2.46.8-.23 1.84 0 2.59 1.54 1.3 1.54 2.09z">
+															</path>
+														</svg>
+														<div class="childContainer-U_a6Yh"><svg aria-hidden="false" width="16" height="16"
+																viewBox="0 0 16 15.2">
+																<path d="M7.4,11.17,4,8.62,5,7.26l2,1.53L10.64,4l1.36,1Z"
+																	fill="hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)"></path>
+															</svg></div>
+													</div>
+												</span>
+											</div><a class="anchor-1MIwyf anchorUnderlineOnHover-2qPutX" href="https://github.com/Gibbu"
+												rel="noreferrer noopener" target="_blank" role="button" tabindex="0"><svg
+													class="connectedAccountOpenIcon-1yfBsb" aria-hidden="false" width="24" height="24"
+													viewBox="0 0 24 24">
+													<path fill="currentColor"
+														d="M10 5V3H5.375C4.06519 3 3 4.06519 3 5.375V18.625C3 19.936 4.06519 21 5.375 21H18.625C19.936 21 21 19.936 21 18.625V14H19V19H5V5H10Z">
+													</path>
+													<path fill="currentColor"
+														d="M21 2.99902H14V4.99902H17.586L9.29297 13.292L10.707 14.706L19 6.41302V9.99902H21V2.99902Z">
+													</path>
+												</svg></a>
+										</div>
+										<div class="connectedAccount-1xKpli"><img alt="League of Legends Logo"
+												class="connectedAccountIcon-2vls0t" src="/assets/94dc6f30a819026fa295d85f1f72b4ab.svg">
+											<div class="connectedAccountNameInner-t24B11">
+												<div class="connectedAccountName-j0meX4">Gibbu</div>
+											</div>
+										</div>
+										<div class="connectedAccount-1xKpli"><img alt="Spotify Logo" class="connectedAccountIcon-2vls0t"
+												src="/assets/eaeac24163b35f7526704a3d9b3c7722.svg">
+											<div class="connectedAccountNameInner-t24B11">
+												<div class="connectedAccountName-j0meX4">Gibbu</div><span aria-label="Verified">
+													<div class="flowerStarContainer-1QeD-L connectedAccountVerifiedIcon-3XCxT8"
+														style="width: 16px; height: 16px;"><svg class="flowerStar-2tNFCR" aria-hidden="false"
+															width="16" height="16" viewBox="0 0 16 15.2">
+															<path fill="hsl(217, calc(var(--saturation-factor, 1) * 7.6%), 33.5%)" fill-rule="evenodd"
+																d="m16 7.6c0 .79-1.28 1.38-1.52 2.09s.44 2 0 2.59-1.84.35-2.46.8-.79 1.84-1.54 2.09-1.67-.8-2.47-.8-1.75 1-2.47.8-.92-1.64-1.54-2.09-2-.18-2.46-.8.23-1.84 0-2.59-1.54-1.3-1.54-2.09 1.28-1.38 1.52-2.09-.44-2 0-2.59 1.85-.35 2.48-.8.78-1.84 1.53-2.12 1.67.83 2.47.83 1.75-1 2.47-.8.91 1.64 1.53 2.09 2 .18 2.46.8-.23 1.84 0 2.59 1.54 1.3 1.54 2.09z">
+															</path>
+														</svg>
+														<div class="childContainer-U_a6Yh"><svg aria-hidden="false" width="16" height="16"
+																viewBox="0 0 16 15.2">
+																<path d="M7.4,11.17,4,8.62,5,7.26l2,1.53L10.64,4l1.36,1Z"
+																	fill="hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)"></path>
+															</svg></div>
+													</div>
+												</span>
+											</div><a class="anchor-1MIwyf anchorUnderlineOnHover-2qPutX"
+												href="https://open.spotify.com/user/qtt7u0u8z5xarl57h78xa1jzk" rel="noreferrer noopener"
+												target="_blank" role="button" tabindex="0"><svg class="connectedAccountOpenIcon-1yfBsb"
+													aria-hidden="false" width="24" height="24" viewBox="0 0 24 24">
+													<path fill="currentColor"
+														d="M10 5V3H5.375C4.06519 3 3 4.06519 3 5.375V18.625C3 19.936 4.06519 21 5.375 21H18.625C19.936 21 21 19.936 21 18.625V14H19V19H5V5H10Z">
+													</path>
+													<path fill="currentColor"
+														d="M21 2.99902H14V4.99902H17.586L9.29297 13.292L10.707 14.706L19 6.41302V9.99902H21V2.99902Z">
+													</path>
+												</svg></a>
+										</div>
+										<div class="connectedAccount-1xKpli"><img alt="Steam Logo" class="connectedAccountIcon-2vls0t"
+												src="/assets/d897626dfa2016ea3ad0af935acb6070.svg">
+											<div class="connectedAccountNameInner-t24B11">
+												<div class="connectedAccountName-j0meX4">Gibbu</div><span aria-label="Verified">
+													<div class="flowerStarContainer-1QeD-L connectedAccountVerifiedIcon-3XCxT8"
+														style="width: 16px; height: 16px;"><svg class="flowerStar-2tNFCR" aria-hidden="false"
+															width="16" height="16" viewBox="0 0 16 15.2">
+															<path fill="hsl(217, calc(var(--saturation-factor, 1) * 7.6%), 33.5%)" fill-rule="evenodd"
+																d="m16 7.6c0 .79-1.28 1.38-1.52 2.09s.44 2 0 2.59-1.84.35-2.46.8-.79 1.84-1.54 2.09-1.67-.8-2.47-.8-1.75 1-2.47.8-.92-1.64-1.54-2.09-2-.18-2.46-.8.23-1.84 0-2.59-1.54-1.3-1.54-2.09 1.28-1.38 1.52-2.09-.44-2 0-2.59 1.85-.35 2.48-.8.78-1.84 1.53-2.12 1.67.83 2.47.83 1.75-1 2.47-.8.91 1.64 1.53 2.09 2 .18 2.46.8-.23 1.84 0 2.59 1.54 1.3 1.54 2.09z">
+															</path>
+														</svg>
+														<div class="childContainer-U_a6Yh"><svg aria-hidden="false" width="16" height="16"
+																viewBox="0 0 16 15.2">
+																<path d="M7.4,11.17,4,8.62,5,7.26l2,1.53L10.64,4l1.36,1Z"
+																	fill="hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)"></path>
+															</svg></div>
+													</div>
+												</span>
+											</div><a class="anchor-1MIwyf anchorUnderlineOnHover-2qPutX"
+												href="https://steamcommunity.com/profiles/76561198066918885" rel="noreferrer noopener"
+												target="_blank" role="button" tabindex="0"><svg class="connectedAccountOpenIcon-1yfBsb"
+													aria-hidden="false" width="24" height="24" viewBox="0 0 24 24">
+													<path fill="currentColor"
+														d="M10 5V3H5.375C4.06519 3 3 4.06519 3 5.375V18.625C3 19.936 4.06519 21 5.375 21H18.625C19.936 21 21 19.936 21 18.625V14H19V19H5V5H10Z">
+													</path>
+													<path fill="currentColor"
+														d="M21 2.99902H14V4.99902H17.586L9.29297 13.292L10.707 14.706L19 6.41302V9.99902H21V2.99902Z">
+													</path>
+												</svg></a>
+										</div>
+										<div class="connectedAccount-1xKpli"><img alt="Twitch Logo" class="connectedAccountIcon-2vls0t"
+												src="/assets/ca71e0b8818221eea1deebbaf8dc6518.svg">
+											<div class="connectedAccountNameInner-t24B11">
+												<div class="connectedAccountName-j0meX4">gibbu</div><span aria-label="Verified">
+													<div class="flowerStarContainer-1QeD-L connectedAccountVerifiedIcon-3XCxT8"
+														style="width: 16px; height: 16px;"><svg class="flowerStar-2tNFCR" aria-hidden="false"
+															width="16" height="16" viewBox="0 0 16 15.2">
+															<path fill="hsl(217, calc(var(--saturation-factor, 1) * 7.6%), 33.5%)" fill-rule="evenodd"
+																d="m16 7.6c0 .79-1.28 1.38-1.52 2.09s.44 2 0 2.59-1.84.35-2.46.8-.79 1.84-1.54 2.09-1.67-.8-2.47-.8-1.75 1-2.47.8-.92-1.64-1.54-2.09-2-.18-2.46-.8.23-1.84 0-2.59-1.54-1.3-1.54-2.09 1.28-1.38 1.52-2.09-.44-2 0-2.59 1.85-.35 2.48-.8.78-1.84 1.53-2.12 1.67.83 2.47.83 1.75-1 2.47-.8.91 1.64 1.53 2.09 2 .18 2.46.8-.23 1.84 0 2.59 1.54 1.3 1.54 2.09z">
+															</path>
+														</svg>
+														<div class="childContainer-U_a6Yh"><svg aria-hidden="false" width="16" height="16"
+																viewBox="0 0 16 15.2">
+																<path d="M7.4,11.17,4,8.62,5,7.26l2,1.53L10.64,4l1.36,1Z"
+																	fill="hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)"></path>
+															</svg></div>
+													</div>
+												</span>
+											</div><a class="anchor-1MIwyf anchorUnderlineOnHover-2qPutX" href="https://www.twitch.tv/gibbu"
+												rel="noreferrer noopener" target="_blank" role="button" tabindex="0"><svg
+													class="connectedAccountOpenIcon-1yfBsb" aria-hidden="false" width="24" height="24"
+													viewBox="0 0 24 24">
+													<path fill="currentColor"
+														d="M10 5V3H5.375C4.06519 3 3 4.06519 3 5.375V18.625C3 19.936 4.06519 21 5.375 21H18.625C19.936 21 21 19.936 21 18.625V14H19V19H5V5H10Z">
+													</path>
+													<path fill="currentColor"
+														d="M21 2.99902H14V4.99902H17.586L9.29297 13.292L10.707 14.706L19 6.41302V9.99902H21V2.99902Z">
+													</path>
+												</svg></a>
+										</div>
+										<div class="connectedAccount-1xKpli"><img alt="Twitter Logo" class="connectedAccountIcon-2vls0t"
+												src="/assets/85cf2b49d2a185c98ec8e383ad5a05d6.svg">
+											<div class="connectedAccountNameInner-t24B11">
+												<div class="connectedAccountName-j0meX4">Gibbu_</div><span aria-label="Verified">
+													<div class="flowerStarContainer-1QeD-L connectedAccountVerifiedIcon-3XCxT8"
+														style="width: 16px; height: 16px;"><svg class="flowerStar-2tNFCR" aria-hidden="false"
+															width="16" height="16" viewBox="0 0 16 15.2">
+															<path fill="hsl(217, calc(var(--saturation-factor, 1) * 7.6%), 33.5%)" fill-rule="evenodd"
+																d="m16 7.6c0 .79-1.28 1.38-1.52 2.09s.44 2 0 2.59-1.84.35-2.46.8-.79 1.84-1.54 2.09-1.67-.8-2.47-.8-1.75 1-2.47.8-.92-1.64-1.54-2.09-2-.18-2.46-.8.23-1.84 0-2.59-1.54-1.3-1.54-2.09 1.28-1.38 1.52-2.09-.44-2 0-2.59 1.85-.35 2.48-.8.78-1.84 1.53-2.12 1.67.83 2.47.83 1.75-1 2.47-.8.91 1.64 1.53 2.09 2 .18 2.46.8-.23 1.84 0 2.59 1.54 1.3 1.54 2.09z">
+															</path>
+														</svg>
+														<div class="childContainer-U_a6Yh"><svg aria-hidden="false" width="16" height="16"
+																viewBox="0 0 16 15.2">
+																<path d="M7.4,11.17,4,8.62,5,7.26l2,1.53L10.64,4l1.36,1Z"
+																	fill="hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)"></path>
+															</svg></div>
+													</div>
+												</span>
+											</div><a class="anchor-1MIwyf anchorUnderlineOnHover-2qPutX" href="https://twitter.com/Gibbu_"
+												rel="noreferrer noopener" target="_blank" role="button" tabindex="0"><svg
+													class="connectedAccountOpenIcon-1yfBsb" aria-hidden="false" width="24" height="24"
+													viewBox="0 0 24 24">
+													<path fill="currentColor"
+														d="M10 5V3H5.375C4.06519 3 3 4.06519 3 5.375V18.625C3 19.936 4.06519 21 5.375 21H18.625C19.936 21 21 19.936 21 18.625V14H19V19H5V5H10Z">
+													</path>
+													<path fill="currentColor"
+														d="M21 2.99902H14V4.99902H17.586L9.29297 13.292L10.707 14.706L19 6.41302V9.99902H21V2.99902Z">
+													</path>
+												</svg></a>
+										</div>
+										<div class="connectedAccount-1xKpli"><img alt="YouTube Logo" class="connectedAccountIcon-2vls0t"
+												src="/assets/57ee9535485efae7eb923ed4893abb57.svg">
+											<div class="connectedAccountNameInner-t24B11">
+												<div class="connectedAccountName-j0meX4">Gibbo12111</div><span aria-label="Verified">
+													<div class="flowerStarContainer-1QeD-L connectedAccountVerifiedIcon-3XCxT8"
+														style="width: 16px; height: 16px;"><svg class="flowerStar-2tNFCR" aria-hidden="false"
+															width="16" height="16" viewBox="0 0 16 15.2">
+															<path fill="hsl(217, calc(var(--saturation-factor, 1) * 7.6%), 33.5%)" fill-rule="evenodd"
+																d="m16 7.6c0 .79-1.28 1.38-1.52 2.09s.44 2 0 2.59-1.84.35-2.46.8-.79 1.84-1.54 2.09-1.67-.8-2.47-.8-1.75 1-2.47.8-.92-1.64-1.54-2.09-2-.18-2.46-.8.23-1.84 0-2.59-1.54-1.3-1.54-2.09 1.28-1.38 1.52-2.09-.44-2 0-2.59 1.85-.35 2.48-.8.78-1.84 1.53-2.12 1.67.83 2.47.83 1.75-1 2.47-.8.91 1.64 1.53 2.09 2 .18 2.46.8-.23 1.84 0 2.59 1.54 1.3 1.54 2.09z">
+															</path>
+														</svg>
+														<div class="childContainer-U_a6Yh"><svg aria-hidden="false" width="16" height="16"
+																viewBox="0 0 16 15.2">
+																<path d="M7.4,11.17,4,8.62,5,7.26l2,1.53L10.64,4l1.36,1Z"
+																	fill="hsl(0, calc(var(--saturation-factor, 1) * 0%), 100%)"></path>
+															</svg></div>
+													</div>
+												</span>
+											</div><a class="anchor-1MIwyf anchorUnderlineOnHover-2qPutX"
+												href="https://www.youtube.com/channel/UCtaIPbqgwFCFPaAm9fRdh5g" rel="noreferrer noopener"
+												target="_blank" role="button" tabindex="0"><svg class="connectedAccountOpenIcon-1yfBsb"
+													aria-hidden="false" width="24" height="24" viewBox="0 0 24 24">
+													<path fill="currentColor"
+														d="M10 5V3H5.375C4.06519 3 3 4.06519 3 5.375V18.625C3 19.936 4.06519 21 5.375 21H18.625C19.936 21 21 19.936 21 18.625V14H19V19H5V5H10Z">
+													</path>
+													<path fill="currentColor"
+														d="M21 2.99902H14V4.99902H17.586L9.29297 13.292L10.707 14.706L19 6.41302V9.99902H21V2.99902Z">
+													</path>
+												</svg></a>
+										</div>
+									</div>
+								</div>
+								<div aria-hidden="true"
+									style="position: absolute; pointer-events: none; min-height: 0px; min-width: 1px; flex: 0 0 auto; height: 0px;">
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
