@@ -9,29 +9,38 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link rel="icon" href="https://discord.com/assets/07dca80a102d4149e9736d4b162cff6f.ico"> <!-- section:title -->
 	<title>Theme Preview</title>
-	<link id="import" rel="stylesheet" href="">
 	<style>
 		.HIDDEN {
 			display: none !important;
 		}
 	</style>
 	<script defer>
-		try {
-			let {
-				href
-			} = window.location;
-			let url = new URL(href);
-			let file = url.searchParams.get('file');
-			let lightTheme = url.searchParams.get('lightTheme');
-			document.querySelector('#import').setAttribute('href', file);
-			if (lightTheme == "true") {
-				document.querySelector('html').classList.remove('theme-dark');
-				document.querySelector('html').classList.add('theme-light');
-			}
-		} catch (err) {
-			console.error('Issues with parsing URL Parameters', err);
+		const createLink = (url) => {
+			const link = document.createElement('link');
+			link.setAttribute('rel', 'stylesheet');
+			link.setAttribute('href', url);
+			document.querySelector('head').appendChild(link);
 		}
 
+		let {href} = window.location;
+		let url = new URL(href);
+		let file = url.searchParams.get('file');
+
+		if (file) {
+			if (file.includes('|')) {
+				const files = file.split('|');
+				files.forEach(file => createLink(file));
+			} else {
+				createLink(file);
+			}
+		}
+		let lightTheme = url.searchParams.get('lightTheme');
+		if (lightTheme === "true") {
+			document.querySelector('html').classList.remove('theme-dark');
+			document.querySelector('html').classList.add('theme-light');
+		}
+
+		// New theme editor stuff 👀
 		window.addEventListener('message', event => {
 			const data = JSON.parse(event.data);
 
