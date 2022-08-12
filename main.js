@@ -17,13 +17,12 @@ if (file) {
 		createLink(file);
 	}
 }
-let lightTheme = url.searchParams.get('lightTheme');
-if (lightTheme === "true") {
+
+if (url.searchParams.get('lightTheme') === "true") {
 	document.querySelector('html').classList.remove('theme-dark');
 	document.querySelector('html').classList.add('theme-light');
 }
 
-// New theme editor stuff 👀
 window.addEventListener('message', event => {
 	const data = JSON.parse(event.data);
 
@@ -55,7 +54,7 @@ window.addEventListener('message', event => {
 		document.querySelector(`#font-${data.index}`)?.remove();
 	}
 
-	if (data.action === 'addAddon') {
+	if (data.action === 'addAddon' && document.querySelector(`.${data.class}`)) {
 		const tag = document.createElement('style');
 
 		tag.className = data.class;
