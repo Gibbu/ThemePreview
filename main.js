@@ -66,7 +66,12 @@ window.addEventListener('message', event => {
 	}
 
 	if (data.action === 'toggleModal') {
-		document.querySelector('#modal').classList.toggle('HIDDEN');
-		document.querySelector('#popout').classList.toggle('HIDDEN');
+		if (data.visible) {
+			document.querySelector('#modal').classList.remove('HIDDEN');
+			document.querySelector('#popout').classList.add('HIDDEN');
+		} else {
+			document.querySelector('#modal').classList.add('HIDDEN');
+			document.querySelector('#popout').classList.remove('HIDDEN');
+		}
 	}
 })
