@@ -1,21 +1,26 @@
-const createLink = (url) => {
+const createLink = (url, className) => {
 	const link = document.createElement('link');
 	link.setAttribute('rel', 'stylesheet');
 	link.setAttribute('href', url);
+	if (className) link.setAttribute('class', className);
 	document.querySelector('head').appendChild(link);
 }
+const createEl = (tag, attrs) => {
+	const el = Object.assign(document.createElement(tag), attrs);
+	document.querySelector('head').appendChild(el);
+}
+const removeEl = (selector) => {
+	document.querySelectorAll(selector)?.forEach(el => el.remove());
+}
+
 
 let {href} = window.location;
 let url = new URL(href);
 let file = url.searchParams.get('file');
 
 if (file) {
-	if (file.includes('|')) {
-		const files = file.split('|');
-		files.forEach(file => createLink(file));
-	} else {
-		createLink(file);
-	}
+	const files = file.split('|');
+	files.forEach(file => createLink(file));
 }
 
 if (url.searchParams.get('lightTheme') === "true") {
@@ -26,52 +31,53 @@ if (url.searchParams.get('lightTheme') === "true") {
 window.addEventListener('message', event => {
 	const data = JSON.parse(event.data);
 
-	if (data.action === 'reset') {
-		const props = document.documentElement.getAttribute('style').split(';').slice(0, 2).map(e => e += ';').join(' ');
-		document.documentElement.setAttribute('style', props);
-	}
-
-	if (data.action === 'setProperty') {
-		document.documentElement.style.setProperty(`--${data.variable}`, data.value);
-	}
-	if (data.action === 'removeProperty') {
-		document.documentElement.style.removeProperty(`--${data.variable}`);
-	}
-
-	if (data.action === 'addFont') {
-		if (!document.querySelector(`#font-${data.index}`)) {
-			const tag = document.createElement('style');
-			tag.setAttribute('id', `font-${data.index}`);
-			tag.setAttribute('class', 'customfont');
-			tag.innerText = data.text;
-
-			document.querySelector('head').appendChild(tag);
-		} else {
-			document.querySelector(`#font-${data.index}`).innerHTML = data.text;
+	const actions = {
+		reset() {
+			const props = document.documentElement.getAttribute('style').split(';').slice(0, 2).map(e => e += ';').join(' ');
+			document.documentElement.setAttribute('style', props);
+		},
+		setProp() {
+			document.documentElement.style.setProperty(`--${data.variable}`, data.value);
+		},
+		removeProp() {
+			document.documentElement.style.removeProperty(`--${data.variable}`);
+		},
+		addFont() {
+			const tag = document.querySelector(`#font-${data.index}`)
+			if (!tag) {
+				createEl('style', {
+					id: `font-${data.index}`,
+					className: 'customfont',
+					innerText: data.text
+				})
+			} else {
+				tag.innerHTML = data.text;
+			}
+		},
+		removeFont() {
+			removeEl(`#font-${data.index}`)
+		},
+		addAddon() {
+			if (!document.querySelector(`.${data.class}`)) {
+				createEl('style', {
+					className: data.class,
+					textContent: `@import url('${data.text}')`
+				});
+			}
+		},
+		removeAddon() {
+			removeEl(`.${data.class}`);
+		},
+		toggleModal() {
+			if (data.visible) {
+				document.querySelector('#modal').classList.remove('HIDDEN');
+				document.querySelector('#popout').classList.add('HIDDEN');
+			} else {
+				document.querySelector('#modal').classList.add('HIDDEN');
+				document.querySelector('#popout').classList.remove('HIDDEN');
+			}
 		}
 	}
-	if (data.action === 'removeFont') {
-		document.querySelector(`#font-${data.index}`)?.remove();
-	}
 
-	if (data.action === 'addAddon' && document.querySelector(`.${data.class}`)) {
-		const tag = document.createElement('style');
-
-		tag.className = data.class;
-		tag.textContent = `@import url('${data.text}');`;
-		document.querySelector('head').appendChild(tag);
-	}
-	if (data.action === 'removeAddon') {
-		document.querySelectorAll(`.${data.class}`)?.forEach(el => el.remove());
-	}
-
-	if (data.action === 'toggleModal') {
-		if (data.visible) {
-			document.querySelector('#modal').classList.remove('HIDDEN');
-			document.querySelector('#popout').classList.add('HIDDEN');
-		} else {
-			document.querySelector('#modal').classList.add('HIDDEN');
-			document.querySelector('#popout').classList.remove('HIDDEN');
-		}
-	}
+	actions[data.action]?.();
 })
