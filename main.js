@@ -1,18 +1,12 @@
-const createLink = (url, className) => {
-	const link = document.createElement('link');
-	link.setAttribute('rel', 'stylesheet');
-	link.setAttribute('href', url);
-	if (className) link.setAttribute('class', className);
-	document.querySelector('head').appendChild(link);
+const el = {
+	create(tag, attrs) {
+		const el = Object.assign(document.createElement(tag), attrs);
+		document.querySelector('head').appendChild(el);
+	},
+	remove(selector) {
+		document.querySelectorAll(selector)?.forEach(el => el.remove());
+	}
 }
-const createEl = (tag, attrs) => {
-	const el = Object.assign(document.createElement(tag), attrs);
-	document.querySelector('head').appendChild(el);
-}
-const removeEl = (selector) => {
-	document.querySelectorAll(selector)?.forEach(el => el.remove());
-}
-
 
 let {href} = window.location;
 let url = new URL(href);
@@ -20,7 +14,12 @@ let file = url.searchParams.get('file');
 
 if (file) {
 	const files = file.split('|');
-	files.forEach(file => createLink(file));
+	files.forEach(file => {
+		const link = document.createElement('link');
+		link.setAttribute('rel', 'stylesheet');
+		link.setAttribute('href', file);
+		document.querySelector('head').appendChild(link);
+	});
 }
 
 if (url.searchParams.get('lightTheme') === "true") {
@@ -32,6 +31,12 @@ window.addEventListener('message', event => {
 	const data = JSON.parse(event.data);
 
 	const actions = {
+		setPreview() {
+			el.create('style', {
+				id: 'preview',
+				textContent: data.text
+			})
+		},
 		reset() {
 			const props = document.documentElement.getAttribute('style').split(';').slice(0, 2).map(e => e += ';').join(' ');
 			document.documentElement.setAttribute('style', props);
@@ -45,7 +50,7 @@ window.addEventListener('message', event => {
 		addFont() {
 			const tag = document.querySelector(`#font-${data.index}`)
 			if (!tag) {
-				createEl('style', {
+				el.create('style', {
 					id: `font-${data.index}`,
 					className: 'customfont',
 					innerText: data.text
@@ -55,18 +60,18 @@ window.addEventListener('message', event => {
 			}
 		},
 		removeFont() {
-			removeEl(`#font-${data.index}`)
+			el.remove(`#font-${data.index}`)
 		},
 		addAddon() {
 			if (!document.querySelector(`.${data.class}`)) {
-				createEl('style', {
+				el.create('style', {
 					className: data.class,
 					textContent: `@import url('${data.text}')`
 				});
 			}
 		},
 		removeAddon() {
-			removeEl(`.${data.class}`);
+			el.remove(`.${data.class}`);
 		},
 		toggleModal() {
 			if (data.visible) {
