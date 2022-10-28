@@ -32,10 +32,7 @@ window.addEventListener('message', event => {
 
 	const actions = {
 		setPreview() {
-			el.create('style', {
-				id: 'preview',
-				textContent: data.text
-			})
+			document.querySelector('#preview').textContent = data.text;
 		},
 		reset() {
 			const props = document.documentElement.getAttribute('style').split(';').slice(0, 2).map(e => e += ';').join(' ');
