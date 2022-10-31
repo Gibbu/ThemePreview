@@ -78,6 +78,20 @@ window.addEventListener('message', event => {
 				document.querySelector('#modal').classList.add('HIDDEN');
 				document.querySelector('#popout').classList.remove('HIDDEN');
 			}
+		},
+		toggleTheme() {
+			if (document.documentElement.classList.contains('theme-dark')) {
+				document.querySelectorAll('.theme-dark')?.forEach(el => {
+					el.classList.add('theme-light');
+					el.classList.remove('theme-dark');
+				});
+			} else {
+				document.querySelectorAll('.theme-light')?.forEach(el => {
+					el.classList.add('theme-dark');
+					el.classList.remove('theme-light');
+				});
+			}
+
 		}
 	}
 
