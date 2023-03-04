@@ -12,8 +12,20 @@ let {href} = window.location;
 let url = new URL(href);
 let file = url.searchParams.get('file');
 
+const checkFile = async(file) => {
+	try {
+		const req = await fetch(file);
+		console.log(req);
+	} catch (error) {
+		console.error(error);
+	}
+}
+
 if (file) {
 	const files = file.split('|');
+
+	checkFile(file);
+	
 	files.forEach(file => {
 		const link = document.createElement('link');
 		link.setAttribute('rel', 'stylesheet');
