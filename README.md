@@ -1,13 +1,13 @@
 ## Theme preview for Discord themes
 #### Usage:  
-Go to [https://gibbu.github.io/ThemePreview/?file=(DIRECT LINK)](https://gibbu.github.io/ThemePreview/?file)  
-Paste your direct web hosted css url in place if (DIRECT LINK)
+Go to [https://discord-preview.vercel.app/?file=(DIRECT LINK)](https://gibbu.github.io/ThemePreview/?file)  
+Paste your direct web hosted css url in place of `(DIRECT LINK)`
 
 - - -
 
 #### Direct link example:  
 This will work: `https://discordstyles.github.io/Slate/Slate.theme.css`  
-This will not: `https://github.com/DiscordStyles/Slate`
+This will **not**: `https://github.com/DiscordStyles/Slate/blob/main/Slate.theme.css`
 
 - - -
 
@@ -24,7 +24,7 @@ This will not: `https://github.com/DiscordStyles/Slate`
 
 #### End result:
 ```
-https://gibbu.github.io/ThemePreview/?file=https://discordstyles.github.io/MinimalCord/MinimalCord.theme.css|https://discordstyles.github.io/RadialStatus/RadialStatus.theme.css&lightTheme=true
+https://discord-preview.vercel.app/?file=https://discordstyles.github.io/MinimalCord/MinimalCord.theme.css|https://discordstyles.github.io/RadialStatus/RadialStatus.theme.css&lightTheme=true
 ```
 
 - - -
