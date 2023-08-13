@@ -6359,7 +6359,6 @@ img[alt] {
 	line-height: 1.375rem;
 	min-height: 1.375rem;
 	color: var(--text-muted);
-	white-space: break-spaces;
 	word-wrap: pre-wrap
 }
 
