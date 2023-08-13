@@ -26,3 +26,7 @@ This will not: `https://github.com/DiscordStyles/Slate`
 ```
 https://gibbu.github.io/ThemePreview/?file=https://discordstyles.github.io/MinimalCord/MinimalCord.theme.css|https://discordstyles.github.io/RadialStatus/RadialStatus.theme.css&lightTheme=true
 ```
+
+- - -
+
+Plz discord don't sue me :\

@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "scripts": {
+    "purge": "node purge.js"
+  },
+  "devDependencies": {
+    "purgecss": "^5.0.0"
+  }
+}
