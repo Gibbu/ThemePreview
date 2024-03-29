@@ -1,9 +1,11 @@
 {
   "type": "module",
   "scripts": {
-    "purge": "node purge.js"
+    "purge": "node purge.js",
+    "mini": "node minify.js"
   },
   "devDependencies": {
+    "lightningcss": "^1.24.1",
     "purgecss": "^5.0.0"
   }
 }
